@@ -1,0 +1,238 @@
+/*
+ Theme Name:   Sparkling Child
+ Description:  Sparkling Child Theme
+ Author:       Admin
+ Template:     sparkling
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Text Domain:  sparkling-child
+*/
+/*
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&subset=latin,latin-ext);
+*/
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Hide attachement rules and logged in verification on comment form */
+
+.comment-list .logged-in-as, .comment-list .comment-form-attachment label {
+    display: none;
+}
+
+#secondary .widget > h3 {
+    margin-top: 2px;
+}
+
+/* Make sidebar white (why is it not white!??) */
+div.well {
+    background-color: #FFFFFF;
+}
+
+/* BG of highlighted text to be white */
+
+.navbar-default .navbar-nav > .active > a,.navbar-default .navbar-nav > .active > a:hover,.navbar-default .navbar-nav > .active > a:active { 
+    background-color: #FFFFFF;
+	font-weight: bold;
+} 
+
+/* CHANGE COLORS HERE */
+
+/* Widget links blue */
+#secondary .widget a {
+    color: #9aac38;
+} 
+/* Add countdown timer to posts and adjust title */
+div.countdown {
+    background-color: #9aac38;
+}
+
+/* END OF THEME COLORS */
+
+
+/* Like button fix */
+.vortex-container-vote-comment {
+	display: inline-block;
+	float: right;
+	margin-left: 5px;
+}
+
+table.profile-fields .label {
+	white-space: normal;
+	color: black;
+	font-size: 1em;
+	line-height: 1em;
+	background: none !important;
+	display: table-cell;
+	text-align: left;
+	width: 35% !important;
+}
+
+table.profile-fields tr {
+	height: 80px;
+}
+
+#secondary .widget {
+    margin-bottom: 25px;
+}
+
+/* Make nav bar narrower */
+li.menu-item a {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+.site-navigation-inner {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.main-content-area {
+	margin-top: 20px;
+}
+
+#secondary .widget {
+	color: #636467;
+}
+
+#secondary .widget > h3 {
+	font-weight: bold;
+}
+
+/* Hide attachment rules and log out option above comment */
+.comment-form-attachment label, p.logged-in-as {
+	display: none;
+}
+
+/* More compact comments */
+.comment .comment-body {
+	margin-top: 1em;
+	padding: 20px;
+    padding-left: 88px;
+}
+.comment-list li.comment > div img.avatar {
+    left: 20px;
+    top: 20px;
+}
+
+/* LOGO adjustments */
+.navbar > .container .navbar-brand {
+    color: #005593 !important;
+    text-transform: lowercase;
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-size: xx-large;
+}
+
+/* Add shadow to main elements */
+.navbar, .post-inner-content, div.well {
+    box-shadow: 2px 2px 9px #B3B3B3;
+}
+
+/* fix spacing issues on page headers and post meta */
+.page-header {
+    position: relative;	
+    margin-top: 0px;
+}
+.entry-meta {
+    margin-bottom: 20px;
+}
+.entry-meta {
+    font-size: 13px;
+    color: #6B6B6B;
+}
+iframe.iframe-stats {
+    width: 100%;
+    height: 2160px;
+    border: none;
+}
+
+/* Hide header on profile page */
+article#post-0 > header {
+    display: none;
+}
+
+article.post {
+	position: relative;
+}
+
+.post-inner-content {
+    padding: 35px 40px;
+}
+
+/* Add countdown timer to posts and adjust title */
+div.countdown {
+    display: block;
+    position: absolute;
+    right: 0;
+	top: -16px;
+    text-align: center;
+    color: white;
+    padding: 7px 15px;
+    border-radius: 2px;
+}
+div.countdown .days {
+    display: block;
+    margin: -6px;
+    font-size: 1.5em;
+	font-weight: bold;
+}
+
+.post-inner-content .entry-title {
+    display: inline-block;
+    margin-right: 100px;
+}
+
+.comment-list .children {
+    padding-left: 10px !important;
+}
+
+.comment-like-link {
+	float: right;
+	margin-right: 10px;
+}
+
+.read-more {
+	float: right;
+}
+
+.post-inner-content .entry-meta {
+	display: none;
+}
+
+.description indicator-hint {
+	display: none;
+}
+
+.moderator {
+    background-color: #636467;
+    color: white;
+    padding: 0px 5px;
+}
+
+/* Print Style Sheet */
+@media print {
+body, h1, h2, h3, ol, ul, div {
+    background: white;
+    color: #3c3c3c;
+    border: 0;
+	}
+#header { }
+#content { display: block; }
+#comments { display: block; }
+.well { display: none; }
+#respond { display: none; }
+footer { display: none; }
+a[href]:after { content: none !important; }
+div.comment-body { 
+	page-break-inside: avoid;
+	-webkit-region-break-inside: avoid;
+	}
+}
+@page {
+    margin: 0.8cm;
+}
+
+/* Fix margin above info on profile without username */
+#buddypress div#item-header #item-header-cover-image #item-header-content {
+    margin-top: -70px;
+}

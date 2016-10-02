@@ -1,0 +1,730 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Sparkling Theme\n"
+"POT-Creation-Date: 2016-04-14 14:01+0200\n"
+"PO-Revision-Date: 2016-04-14 14:02+0200\n"
+"Last-Translator: Aigars Silkalns <a.silkalns@gmail.com>\n"
+"Language-Team: colorlib <info@colorlib.com>\n"
+"Language: cs_CZ\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.6\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Poedit-KeywordsList: _e;__;esc_attr__;esc_html__;esc_html_e;"
+"esc_attr_x:1,2c;_nx:4c,1,2;_n:1,2\n"
+"_nx: 4c,1,2;_n:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: ..\n"
+
+#: ../comments.php:35
+#, php-format
+msgctxt "comments title"
+msgid "One thought"
+msgid_plural "%1$s thoughts"
+msgstr[0] "1 komentář"
+msgstr[1] "%1$s komentáře"
+msgstr[2] "%1$s komentářů"
+
+#: ../comments.php:38
+#, php-format
+msgctxt "comments user count"
+msgid " from %1$s user"
+msgid_plural " from %1$s users"
+msgstr[0] " od %1$s uživatele"
+msgstr[1] " od %1$s uživatelů"
+msgstr[2] " od %1$s uživatelů"
+
+#: ../comments.php:49 ../comments.php:69
+msgid "Comment navigation"
+msgstr "Komentáře"
+
+#: ../comments.php:50 ../comments.php:70
+msgid "&larr; Older Comments"
+msgstr "Starší komentáře"
+
+#: ../comments.php:51 ../comments.php:71
+msgid "Newer Comments &rarr;"
+msgstr "Novější komentáře"
+
+#: ../comments.php:81
+msgid "Comments are closed."
+msgstr "Komentáře jsou uzavřeny."
+
+#: ../content.php:22
+msgid "Leave a comment"
+msgstr "Napište komentář"
+
+#: ../content.php:22
+msgid "1 Comment"
+msgstr "1 komentář"
+
+#: ../content.php:22
+msgid "% Comments"
+msgstr "Komentářů: %"
+
+#: ../content.php:24
+msgid "Edit"
+msgstr "Upravit"
+
+#: ../content.php:32 ../content.php:40
+msgid "Read More"
+msgstr "Číst dál »"
+
+#: ../content.php:48
+msgid "Pages:"
+msgstr "Stránky:"
+
+#~ msgctxt "comments title"
+#~ msgid " from %2$s user"
+#~ msgid_plural " from %2$s users"
+#~ msgstr[0] " od %2$s uživatele"
+#~ msgstr[1] " od %2$s uživatelů"
+#~ msgstr[2] " od %2$s uživatelů"
+
+#~ msgctxt "comments title"
+#~ msgid "One thought on &ldquo;%2$s&rdquo;"
+#~ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+#~ msgstr[0] "1 komentář"
+#~ msgstr[1] "%1$s komentáře"
+#~ msgstr[2] "%1$s komentářů"
+
+#~ msgid "Oops! That page can&rsquo;t be found."
+#~ msgstr "Jejda! Stránka nenalezena!"
+
+#~ msgid ""
+#~ "It looks like nothing was found at this location. Maybe try one of the "
+#~ "links below or a search?"
+#~ msgstr "Nenalezeno! Zkuste odkazy dole nebo vyhledávání."
+
+#~ msgid "Recent Posts"
+#~ msgstr "Poslední příspěvky"
+
+#~ msgid "Most Used Categories"
+#~ msgstr "Nejčastěji používané kategorie"
+
+#~ msgid "Try looking in the monthly archives. %1$s"
+#~ msgstr "Zkuste se podívat v měsíčním archivu: %1$s"
+
+#~ msgid "Archives"
+#~ msgstr "Archiv"
+
+#~ msgid "Tags"
+#~ msgstr "Štítky"
+
+#~ msgid "Author: %s"
+#~ msgstr "Autor: %s"
+
+#~ msgid "Day: %s"
+#~ msgstr "Dnů: %s"
+
+#~ msgid "Month: %s"
+#~ msgstr "Měsíc: %s"
+
+#~ msgid "Year: %s"
+#~ msgstr "Rok: %s"
+
+#~ msgid "Galleries"
+#~ msgstr "Galerie"
+
+#~ msgid "Images"
+#~ msgstr "Obrázky"
+
+#~ msgid "Videos"
+#~ msgstr "Videa"
+
+#~ msgid "Quotes"
+#~ msgstr "Citace"
+
+#~ msgid "Links"
+#~ msgstr "Odkazy"
+
+#~ msgid "Statuses"
+#~ msgstr "Statusy"
+
+#~ msgid "Audios"
+#~ msgstr "Audio"
+
+#~ msgid "Chats"
+#~ msgstr "Chat"
+
+#~ msgid "Nothing Found"
+#~ msgstr "Nenalezeno"
+
+#~ msgid ""
+#~ "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+#~ msgstr ""
+#~ "Chcete publikovat svůj první příspěvek? <a href=\"%1$s\">Začněte zde</a>."
+
+#~ msgid ""
+#~ "Sorry, but nothing matched your search terms. Please try again with some "
+#~ "different keywords."
+#~ msgstr "Omlouváme se, ale nic jsme nenalezli. Zkuste změnit klíčová slova."
+
+#~ msgid ""
+#~ "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+#~ "searching can help."
+#~ msgstr "Zdá se, že to nelze najít. Zkuste vyhledávání."
+
+#~ msgid ", "
+#~ msgstr ", "
+
+#~ msgid " %1$s"
+#~ msgstr " %1$s"
+
+#~ msgid "Primary Menu"
+#~ msgstr "Hlavní menu"
+
+#~ msgid "Footer Links"
+#~ msgstr "Menu v zápatí"
+
+#~ msgid "Sidebar"
+#~ msgstr "Postranní menu"
+
+#~ msgid "Homepage Widget 1"
+#~ msgstr "Úvodní stránka widget 1"
+
+#~ msgid "Displays on the Home Page"
+#~ msgstr "Zobrazí se na úvodní stránce"
+
+#~ msgid "Homepage Widget 2"
+#~ msgstr "Úvodní stránka widget 2"
+
+#~ msgid "Homepage Widget 3"
+#~ msgstr "Úvodní stránka widget 3"
+
+#~ msgid "Footer Widget 1"
+#~ msgstr "Zápatí widget 1"
+
+#~ msgid "Used for footer widget area"
+#~ msgstr "Zobrazí se v zápatí"
+
+#~ msgid "Footer Widget 2"
+#~ msgstr "Zápatí widget 2"
+
+#~ msgid "Footer Widget 3"
+#~ msgstr "Zápatí widget 3"
+
+#~ msgid "Right Sidebar"
+#~ msgstr "Pravé postranní menu"
+
+#~ msgid "Left Sidebar"
+#~ msgstr "Levé postranní menu"
+
+#, fuzzy
+#~ msgid "No Sidebar"
+#~ msgstr "Postranní menu"
+
+#~ msgid "<i class=\"fa fa-chevron-left\"></i> Previous"
+#~ msgstr "<i class=\"fa fa-chevron-left\"></i> Předchozí"
+
+#~ msgid "Next <i class=\"fa fa-chevron-right\"></i>"
+#~ msgstr "Další <i class=\"fa fa-chevron-right\"></i>"
+
+#, fuzzy
+#~ msgid "Sparkling Options"
+#~ msgstr "Rubriky šablony"
+
+#, fuzzy
+#~ msgid "Content Options"
+#~ msgstr "Možnosti šablony"
+
+#, fuzzy
+#~ msgid "Display Comments on Static Pages?"
+#~ msgstr "Zobrazí se na úvodní stránce"
+
+#, fuzzy
+#~ msgid "Slider options"
+#~ msgstr "Rubrika ve slideru"
+
+#~ msgid "Check if you want to enable slider"
+#~ msgstr "Zaškrtněte, pokud chcete aktivovat slider"
+
+#~ msgid "Slider Category"
+#~ msgstr "Rubrika ve slideru"
+
+#~ msgid "Select a category for the featured post slider"
+#~ msgstr "vyberte rubriku, která se zobrazí ve slideru"
+
+#~ msgid "Number of slide items"
+#~ msgstr "Počet položek ve slideru"
+
+#~ msgid "Enter the number of slide items"
+#~ msgstr "Napište počet"
+
+#, fuzzy
+#~ msgid "Layout options"
+#~ msgstr "Vzhled stránky"
+
+#~ msgid "Website Layout Options"
+#~ msgstr "Vzhled stránky"
+
+#, fuzzy
+#~ msgid "Choose between different layout options to be used as default"
+#~ msgstr "Zvolte, kde chcete mít postranní menu"
+
+#, fuzzy
+#~ msgid "Element Color"
+#~ msgstr "Barva tlačítek"
+
+#~ msgid "Default used if no color is selected"
+#~ msgstr "Pokud není nic vybráno, zobrazí se defaultní barva"
+
+#~ msgid "Element color on hover"
+#~ msgstr "Barva tlačítka po najetí myši"
+
+#~ msgid "Action Button"
+#~ msgstr "Akční tlačítko"
+
+#~ msgid "Call For Action Text"
+#~ msgstr "Text pro akční tlačítko"
+
+#~ msgid "Enter the text for call for action section"
+#~ msgstr "Napište text, který se zobrazí v akční sekci"
+
+#~ msgid "Call For Action Button Title"
+#~ msgstr "Název akčního tlačítka"
+
+#~ msgid "Enter the title for Call For Action button"
+#~ msgstr "Vložte název akčního tlačítka"
+
+#~ msgid "CFA button link"
+#~ msgstr "Odkaz akčního tlačítka"
+
+#~ msgid "Enter the link for Call For Action button"
+#~ msgstr "Vložte odkaz pro akční tlačítko"
+
+#~ msgid "Call For Action Text Color"
+#~ msgstr "Barva akčního textu"
+
+#~ msgid "Call For Action Background Color"
+#~ msgstr "Barva pozadí akčního textu"
+
+#~ msgid "Call For Action Button Border Color"
+#~ msgstr "Barva ohraničení akčního tlačítka"
+
+#~ msgid "Call For Action Button Text Color"
+#~ msgstr "Barva písma akčního tlačítka"
+
+#~ msgid "Typography"
+#~ msgstr "Typografie"
+
+#~ msgid "Main Body Text"
+#~ msgstr "Hlavní text webu"
+
+#, fuzzy
+#~ msgid "Used in p tags"
+#~ msgstr "Text v P tagu"
+
+#~ msgid "Heading Color"
+#~ msgstr "Barva nadpisů"
+
+#~ msgid "Color for all headings (h1-h6)"
+#~ msgstr "Pro všechny nadpisy (h1-h6)"
+
+#~ msgid "Link Color"
+#~ msgstr "Barva odkazu"
+
+#~ msgid "Link:hover Color"
+#~ msgstr "Barva aktivního odkazu"
+
+#~ msgid "Header"
+#~ msgstr "Záhlaví"
+
+#~ msgid "Top nav background color"
+#~ msgstr "Barva pozadí horního menu"
+
+#~ msgid "Top nav item color"
+#~ msgstr "Barva textu v horním menu"
+
+#~ msgid "Link color"
+#~ msgstr "Barva odkazu"
+
+#~ msgid "Top nav item hover color"
+#~ msgstr "Barva aktivní položky v horním menu"
+
+#~ msgid "Link:hover color"
+#~ msgstr "Barva aktivního odkazu"
+
+#~ msgid "Top nav dropdown background color"
+#~ msgstr "Barva pozadí submenu"
+
+#~ msgid "Background of dropdown item hover color"
+#~ msgstr "Barva v pozadí aktivního textu v submenu"
+
+#~ msgid "Top nav dropdown item color"
+#~ msgstr "Barva textu v submenu horního menu"
+
+#~ msgid "Dropdown item color"
+#~ msgstr "Barva textu v submenu"
+
+#~ msgid "Top nav dropdown item hover color"
+#~ msgstr "Barva aktivního textu v submenu horního menu"
+
+#~ msgid "Dropdown item hover color"
+#~ msgstr "Barva aktivního textu v submenu"
+
+#~ msgid "Top nav dropdown item background hover color"
+#~ msgstr "Barva aktivního pozadí submenu v horním menu"
+
+#~ msgid "Footer"
+#~ msgstr "Zápatí"
+
+#~ msgid "Footer widget area background color"
+#~ msgstr "Barva pozadí widgetů v zápatí"
+
+#~ msgid "Footer background color"
+#~ msgstr "Barva pozadí v zápatí"
+
+#~ msgid "Footer text color"
+#~ msgstr "Barva textu v zápatí"
+
+#~ msgid "Footer link color"
+#~ msgstr "Barva odkazu v zápatí"
+
+#~ msgid "Footer information"
+#~ msgstr "Text v zápatí"
+
+#~ msgid "Copyright text in footer"
+#~ msgstr "Text autorských práv v zápatí webu"
+
+#~ msgid "Social"
+#~ msgstr "Sociální sítě"
+
+#~ msgid "Social icon color"
+#~ msgstr "Barva ikonky sociální sítě"
+
+#~ msgid "Footer social icon color"
+#~ msgstr "Barva ikonky sociální sítě v zápatí"
+
+#, fuzzy
+#~ msgid "Footer Social Icons"
+#~ msgstr "Barva ikonky sociální sítě v zápatí"
+
+#, fuzzy
+#~ msgid "Check to show social icons in footer"
+#~ msgstr "Barva ikonky sociální sítě v zápatí"
+
+#~ msgid "Other"
+#~ msgstr "Ostatní"
+
+#~ msgid "Custom CSS"
+#~ msgstr "Vlastní CSS"
+
+#~ msgid "Additional CSS"
+#~ msgstr "Doplňkové CSS"
+
+#~ msgid "Support and Documentation"
+#~ msgstr "Podpora a dokumentace"
+
+#~ msgid "Sparkling Documentation"
+#~ msgstr "Dokumentace k šabloně"
+
+#~ msgid ""
+#~ "The best way to contact us with <b>support questions</b> and <b>bug "
+#~ "reports</b> is via"
+#~ msgstr ""
+#~ "Nejlepší způsob, jak nás kontaktovat s <b>dotazy</b> nebo <b>nahlásit "
+#~ "chybu</b> je přes"
+
+#~ msgid "Colorlib support forum"
+#~ msgstr "Colorlib forum podpory"
+
+#~ msgid "If you like this theme, I'd appreciate any of the following:"
+#~ msgstr "Pokud se vám šablona líbí, využijte prosím tyto možnosti:"
+
+#~ msgid "Rate this Theme"
+#~ msgstr "Ohodnotit šablonu"
+
+#~ msgid "Like on Facebook"
+#~ msgstr "Sledovat nás na Facebooku"
+
+#~ msgid "Follow on Twitter"
+#~ msgstr "Sledovat nás na Twitteru"
+
+#, fuzzy
+#~ msgid ""
+#~ "This post is password protected. To view it please enter your password "
+#~ "below:"
+#~ msgstr "<p>Tento příspěvek je chráněn heslem. Napište prosím heslo:</p>"
+
+#~ msgid "Password:"
+#~ msgstr "Heslo:"
+
+#~ msgid "Submit"
+#~ msgstr "Odeslat"
+
+#~ msgid "Theme by %1$s Powered by %2$s"
+#~ msgstr "Šablonu %1$s pohání %2$s"
+
+#~ msgid "Posts navigation"
+#~ msgstr "Příspěvky"
+
+#~ msgid "<i class=\"fa fa-chevron-left\"></i> Older posts"
+#~ msgstr "<i class=\"fa fa-chevron-left\"></i> Starší příspěvky"
+
+#~ msgid "Newer posts <i class=\"fa fa-chevron-right\"></i>"
+#~ msgstr "Novější příspěvky <i class=\"fa fa-chevron-right\"></i>"
+
+#~ msgid "Post navigation"
+#~ msgstr "Příspěvky"
+
+#~ msgid "Sparkling Categories"
+#~ msgstr "Rubriky šablony"
+
+#~ msgid "Categories"
+#~ msgstr "Rubriky"
+
+#~ msgid "Title "
+#~ msgstr "Název"
+
+#~ msgid "Limit Categories "
+#~ msgstr "Maximální počet rubrik"
+
+#~ msgid "Enable Posts Count"
+#~ msgstr "Zobrazit počet příspěvků"
+
+#~ msgid "Sparkling Popular Posts Widget"
+#~ msgstr "Oblíbené příspěvky - widget šablony"
+
+#~ msgid "Popular Posts"
+#~ msgstr "Oblíbené příspěvky"
+
+#~ msgid "Title"
+#~ msgstr "Název"
+
+#~ msgid "Limit Posts Number"
+#~ msgstr "Maximální počet příspěvků"
+
+#~ msgid "Sparkling Social Widget"
+#~ msgstr "Sociální widget šablony"
+
+#~ msgid "Follow us"
+#~ msgstr "Sledujte nás na"
+
+#~ msgid "Search Results for: %s"
+#~ msgstr "Výsledky hledání: %s"
+
+#, fuzzy
+#~ msgid "Search for:"
+#~ msgstr "Hledat..."
+
+#, fuzzy
+#~ msgctxt "placeholder"
+#~ msgid "Search&hellip;"
+#~ msgstr "Hledat..."
+
+#, fuzzy
+#~ msgctxt "label"
+#~ msgid "Search for:"
+#~ msgstr "Hledat..."
+
+#, fuzzy
+#~ msgctxt "submit button"
+#~ msgid "Search"
+#~ msgstr "Hledat..."
+
+#~ msgid "Meta"
+#~ msgstr "Meta"
+
+#~ msgid "Page %s"
+#~ msgstr "Stránka %s"
+
+#~ msgid "One"
+#~ msgstr "Jedna"
+
+#~ msgid "Two"
+#~ msgstr "Dvě"
+
+#~ msgid "Three"
+#~ msgstr "Tři"
+
+#~ msgid "Four"
+#~ msgstr "Čtyři"
+
+#~ msgid "Five"
+#~ msgstr "Pět"
+
+#~ msgid "French Toast"
+#~ msgstr "Francouzský toust"
+
+#~ msgid "Pancake"
+#~ msgstr "Lívanec"
+
+#~ msgid "Omelette"
+#~ msgstr "Omeleta"
+
+#~ msgid "Crepe"
+#~ msgstr "Palačinka"
+
+#~ msgid "Waffle"
+#~ msgstr "Vafle"
+
+#~ msgid "Main"
+#~ msgstr "Hlavní"
+
+#~ msgid "Do You want to display image slider on the Home Page?"
+#~ msgstr "Chcete zobrazit slider na úvodní stránce?"
+
+#~ msgid "Choose between Left and Right sidebar options to be used as default"
+#~ msgstr "Zvolte, kde chcete mít postranní menu"
+
+#~ msgid "Element color"
+#~ msgstr "Barva tlačítek"
+
+#~ msgid "Custom Favicon"
+#~ msgstr "Vlastní favicon"
+
+#~ msgid ""
+#~ "Upload a 32px x 32px PNG/GIF image that will represent your websites "
+#~ "favicon"
+#~ msgstr "Nahrajte obrázek PNG/GIF velikosti 32 x 32 px"
+
+#~ msgid "Used in P tags"
+#~ msgstr "Text v P tagu"
+
+#, fuzzy
+#~ msgid "Show/Hide social icons in footer"
+#~ msgstr "Barva ikonky sociální sítě v zápatí"
+
+#~ msgid "Add full URL for your social network profiles"
+#~ msgstr "Přidejte celý odkaz profilu na vaši sociální síť"
+
+#~ msgid "Facebook"
+#~ msgstr "Facebook"
+
+#~ msgid "Twitter"
+#~ msgstr "Twitter"
+
+#~ msgid "Google+"
+#~ msgstr "Google+"
+
+#~ msgid "Youtube"
+#~ msgstr "YouTube"
+
+#~ msgid "Vimeo"
+#~ msgstr "Vimeo"
+
+#~ msgid "LinkedIn"
+#~ msgstr "LinkedIn"
+
+#~ msgid "Pinterest"
+#~ msgstr "Pinterest"
+
+#~ msgid "RSS Feed"
+#~ msgstr "RSS čtečka"
+
+#~ msgid "Tumblr"
+#~ msgstr "Tumblr"
+
+#~ msgid "Flickr"
+#~ msgstr "Flickr"
+
+#~ msgid "Instagram"
+#~ msgstr "Instagram"
+
+#~ msgid "Dribbble"
+#~ msgstr "Dribble"
+
+#~ msgid "Skype"
+#~ msgstr "Skype"
+
+#~ msgid "Foursquare"
+#~ msgstr "Foursquare"
+
+#~ msgid "SoundCloud"
+#~ msgstr "SoundClound"
+
+#~ msgid "GitHub"
+#~ msgstr "GitHub"
+
+#~ msgid "Theme Options"
+#~ msgstr "Možnosti šablony"
+
+#~ msgid "Click OK to reset. Any theme settings will be lost!"
+#~ msgstr "Pokud kliknete na OK, přijdete o všechny změny!"
+
+#~ msgid "Default options restored."
+#~ msgstr "Původní nastavení obnoveno."
+
+#~ msgid "Options saved."
+#~ msgstr "Změny uloženy."
+
+#~ msgid "No file chosen"
+#~ msgstr "Soubor není vybrán"
+
+#~ msgid "Upload"
+#~ msgstr "Nahrát"
+
+#~ msgid "Remove"
+#~ msgstr "Odstranit"
+
+#~ msgid "Upgrade your version of WordPress for full media support."
+#~ msgstr "Aktualizujte svůj WordPress. Získáte tak plnou podporu."
+
+#~ msgid "View File"
+#~ msgstr "Prohlédnout soubor"
+
+#~ msgid "No Repeat"
+#~ msgstr "Neopakovat"
+
+#~ msgid "Repeat Horizontally"
+#~ msgstr "Opakovat vodorovně"
+
+#~ msgid "Repeat Vertically"
+#~ msgstr "Opakovat svisle"
+
+#~ msgid "Repeat All"
+#~ msgstr "Opakovat vše"
+
+#~ msgid "Top Left"
+#~ msgstr "Zarovnat doleva"
+
+#~ msgid "Top Center"
+#~ msgstr "Zarovnat na střed"
+
+#~ msgid "Top Right"
+#~ msgstr "Zarovnat doprava"
+
+#~ msgid "Middle Left"
+#~ msgstr "Uprostřed vlevo"
+
+#~ msgid "Middle Center"
+#~ msgstr "Uprostřed"
+
+#~ msgid "Middle Right"
+#~ msgstr "Uprostřed napravo"
+
+#~ msgid "Bottom Left"
+#~ msgstr "Dole vlevo"
+
+#~ msgid "Bottom Center"
+#~ msgstr "Dole uprostřed"
+
+#~ msgid "Bottom Right"
+#~ msgstr "Dole vpravo"
+
+#~ msgid "Scroll Normally"
+#~ msgstr "Skrolovací"
+
+#~ msgid "Fixed in Place"
+#~ msgstr "Nehybný"
+
+#~ msgid "Normal"
+#~ msgstr "Normální"
+
+#~ msgid "Italic"
+#~ msgstr "Kurzíva"
+
+#~ msgid "Bold"
+#~ msgstr "Tučně"
+
+#~ msgid "Bold Italic"
+#~ msgstr "Tučná kurzíva"
+
+#~ msgid "Follow us on "
+#~ msgstr "Sledujte nás na"
+
+#~ msgid "Search..."
+#~ msgstr "Hledat..."
