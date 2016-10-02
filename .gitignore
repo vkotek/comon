@@ -1,0 +1,6 @@
+# Blacklist all in folder
+/*
+/plugins/*
+/themes/*
+
+!plugins/comon-plugin/*
