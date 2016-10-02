@@ -1,6 +1,6 @@
 # Blacklist all in folder
 /*
-/plugins/*
-/themes/*
 
+# Except these folders
 !plugins/comon-plugin/*
+!themes/sparkling-child/*
