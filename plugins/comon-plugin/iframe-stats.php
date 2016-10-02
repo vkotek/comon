@@ -102,10 +102,10 @@ global $wpdb;
 		?>
         ]);
 
-        var options = {title:'Pohlavie',
+        var options = {title:'Gender',
                        width:300,
                        height:250,
-					   colors: ['#a2ad00', '#6a8012', '#646464', '#c4c4c4', '#808080','#999999','#b3b3b3','#cccccc'],
+					   colors: ['#005593', '#333333', '#4d4d4d', '#666666', '#808080','#999999','#b3b3b3','#cccccc'],
 					   chartArea:{
 							left:20,
 							top: 40,
@@ -138,10 +138,10 @@ global $wpdb;
 		?>
         ]);
 
-        var options = {title:'Vek',
+        var options = {title:'Age',
                        width:300,
                        height:250,
-					   colors: ['#a2ad00', '#6a8012', '#646464', '#c4c4c4', '#808080','#999999','#b3b3b3','#cccccc'],
+					   colors: ['#005593', '#333333', '#4d4d4d', '#666666', '#808080','#999999','#b3b3b3','#cccccc'],
 					   chartArea:{
 							left:20,
 							top: 40,
@@ -172,10 +172,10 @@ global $wpdb;
 		?>
         ]);
 
-        var options = {title:'Mesto',
+        var options = {title:'City',
                        width:300,
                        height:250,
-					   colors: ['#a2ad00', '#6a8012', '#646464', '#c4c4c4', '#808080','#999999','#b3b3b3','#cccccc'],
+					   colors: ['#005593', '#333333', '#4d4d4d', '#666666', '#808080','#999999','#b3b3b3','#cccccc'],
 					   chartArea:{
 							left:20,
 							top: 40,
@@ -206,10 +206,10 @@ global $wpdb;
 		?>
         ]);
 
-        var options = {title:'Vzdelanie',
+        var options = {title:'Education',
                        width:300,
                        height:250,
-					   colors: ['#a2ad00', '#6a8012', '#646464', '#c4c4c4', '#808080','#999999','#b3b3b3','#cccccc'],
+					   colors: ['#005593', '#333333', '#4d4d4d', '#666666', '#808080','#999999','#b3b3b3','#cccccc'],
 					   chartArea:{
 							left:20,
 							top: 40,
