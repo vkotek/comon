@@ -631,7 +631,8 @@ function ideablog_comment($comment, $args, $depth) {
  <div>
  <?php echo get_avatar($comment,$size='48',$default='<path_to_url>' ); ?>
  <?php if( user_can($comment->user_id,'edit_posts') ) { echo '<span class="moderator">MODERÁTOR</span>'; } ?>
- <?php printf(__(' <cite><b>%s</b></cite>'), get_comment_author_link()); ?>
+ <?php // printf(__(' <cite><b>%s</b></cite>'), get_comment_author_link()); ?>
+ <?php printf(__(' <cite><b>%s</b></cite> '), bp_core_get_userlink($comment->user_id)); ?>
  <?php 
 	echo '<a href="'.wp_nonce_url( bp_loggedin_user_domain() . bp_get_messages_slug() . '/compose/?r=' . get_comment_author() ) .' title="Private Message""><i class="fa fa-envelope" aria-hidden="true"></i></a>';
     if( current_user_can('edit_posts') ) {
