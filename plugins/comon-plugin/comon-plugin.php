@@ -394,9 +394,6 @@ function ideablog_data_filter() {
 
 	$debug = false;
 	
-	// uncomment to BYPASS filtering system
-	return true;
-	
 	// if User is admin, check if user is set and if yes, turn on debugging, if not set, show all posts. Else set user's id and proceed.
 	if ( is_user_logged_in() ) {
 		if ( current_user_can('edit_posts') ) {
@@ -413,14 +410,6 @@ function ideablog_data_filter() {
 		return true; // If user not logged in, show all posts
 	}
 	
-	
-    // Fast way to see profile extended profile
-    //$extended_profile = email_users_extended_get_extended_profile($user_id);
-    //echo "<pre>";
-    //print_r($extended_profile);
-    //echo "</pre>";
-	
-	
 	// Split users into groups of two (odd & even IDs)
 	if( $user_id % 2 == 0 ) {
 		$user_group = '1'; 
@@ -428,59 +417,45 @@ function ideablog_data_filter() {
 		$user_group = '2'; 
 	}
 
+	
     // Get post info
+	$post_group = get_field('group');
 	$post_gender = get_field('gender');
 	$post_age_min = get_field('age_min');
 	$post_age_max = get_field('age_max');
+	$post_city = get_field('city');
 	$post_edu = get_field('education');
-	$post_region = get_field('region');
-	$post_h_income = get_field('h_income');
-	$post_children = get_field('children');
-	$post_bank = get_field('bank');
-	$post_segment = get_field('segment');
-	
+
 	// Get user info
-	// get_val function extracts the option number so that '13) Male' will return '13'
+	// get_val function extracts the option number so that '13) Male' will return '13' 
 	$user_gender = bp_get_profile_field_data('field=139&user_id='.$user_id);
 	$user_gender = get_val($user_gender);
 	$user_age = bp_get_profile_field_data('field=142&user_id='.$user_id);
+	$user_city = bp_get_profile_field_data('field=143&user_id='.$user_id);
+	$user_city = get_val($user_city);
 	$user_edu = bp_get_profile_field_data('field=186&user_id='.$user_id);
 	$user_edu = get_val($user_edu);
-	$user_region = bp_get_profile_field_data('field=199&user_id='.$user_id);
-	$user_region = get_val($user_region);
-	$user_h_income = bp_get_profile_field_data('field=216&user_id='.$user_id);
-	$user_h_income = get_val($user_h_income);
-	$user_children = bp_get_profile_field_data('field=245&user_id='.$user_id);
-	$user_children = get_val($user_edu);
-	$user_bank = bp_get_profile_field_data('field=254&user_id='.$user_id);
-	$user_bank = get_val($user_edu);
-	$user_segment = bp_get_profile_field_data('field=258&user_id='.$user_id);
-	$user_segment = get_val($user_edu);
-
 	
     // Show post unless any of the criteria below not satisfied
 	$show = true;
 
 	// Test post compatibility
+	if ( !in_array( $user_group , $post_group ) )                               { $show = false; $break = 'group'; }
     if ( !in_array($user_gender, $post_gender) )                                { $show = false; $break = 'gender'; }
     if ($post_age_min >= $user_age || $post_age_max <= $user_age)               { $show = false; $break = 'age'; }
-    if ( !in_array($user_edu, $post_edu) )                                      { $show = false; $break = 'education'; }
-    if ( !in_array($user_region, $post_region) )                                { $show = false; $break = 'region'; }
-    if ( !in_array($user_h_income, $post_h_income) )                            { $show = false; $break = 'h_income'; }
-    if ( !in_array($user_children, $post_children) )                            { $show = false; $break = 'children'; }
-    if ( !in_array($user_bank, $post_bank) )                                    { $show = false; $break = 'bank'; }
-    if ( !in_array($user_segment, $post_segment) )                              { $show = false; $break = 'segment'; }
+	if ( !in_array($user_city, $post_city) )                                    { $show = false; $break = 'city'; }
+	if ( !in_array($user_edu, $post_edu) )                                      { $show = false; $break = 'education'; }
 	
 
 	// If debug is on and above tests break:
 	if ( $debug && !$show ) { 
 		printf("<b>[%d] %s</b><br>", get_the_ID(), get_the_title());
-		if ( true ) {
+		if ( true ) { // Replace this with the variables that break
 			printf("Broke at %s", $break);
 			print("<br>USER: ");
-			var_dump(${'user_'.$break});
+			var_dump($user_city); 
 			print("<br>POST: ");
-			var_dump(${'post_'.$break});  
+			var_dump($post_city); 
 		} else {
 			print("OK");
 		}
