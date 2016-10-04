@@ -22,7 +22,7 @@ if ( post_password_required() ) {
 		<?php
 			/* Checks if paging is turned off via GET in URL */
 			if($_GET['page'] == "off") {
-				$paging = "10000";
+				$paging = "1000";
 			} else {
 				$paging = get_option( 'comments_per_page' );
 			}
@@ -32,15 +32,15 @@ if ( post_password_required() ) {
 
 	<?php // You can start editing here -- including this comment! ?>
 
-	<?php if( ideablog_isactive() ) {		comment_form(); 	} else { $paging = "10000"; } // Hide comment form if topic is no longer active and disable paging	?>
+	<?php if( ideablog_isactive() ) {		comment_form(); 	} else { $paging = "1000"; }	?>
 	
 	<?php if ( have_comments() ) : ?>
 		<h3 class="comments-title">
 			<?php
-				printf( _nx( 'One thought', '%1$s thoughts', get_comments_number(), 'comments title', 'sparkling-child' ),
+				printf( _nx( 'One thought', '%1$s thoughts', get_comments_number(), 'comments title', 'sparkling' ),
 					number_format_i18n( get_comments_number() ));
 				if( current_user_can('edit_posts') ) {
-				printf( _nx( ' from %1$s user', ' from %1$s users', comments_unique_users(), 'comments user count', 'sparkling-child' ),
+				printf( _nx( ' from %1$s user', ' from %1$s users', comments_unique_users(), 'comments user count', 'sparkling' ),
 					number_format_i18n( comments_unique_users() ));
 				/* printf('<span>  Uživatelů: %s</span>', comments_unique_users()); */
 				printf('  <a href="%s?page=off" title="Show comments on one page"><i class="fa fa-clone fa-x2"></i></a>', get_permalink() );
@@ -51,7 +51,7 @@ if ( post_password_required() ) {
 			?>
 		</h3>
 
-		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) && $paging != "10000"  ) : // are there comments to navigate through ?>
+		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) && $paging != "1000" ) : // are there comments to navigate through ?>
 		<nav id="comment-nav-above" class="comment-navigation" role="navigation">
 			<h1 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'sparkling' ); ?></h1>
 			<div class="nav-previous"><?php previous_comments_link( esc_html__( '&larr; Older Comments', 'sparkling' ) ); ?></div>
@@ -71,7 +71,7 @@ if ( post_password_required() ) {
 			?>
 		</ol><!-- .comment-list -->
 
-		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) && $paging != "10000"  ) : // are there comments to navigate through ?>
+		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) && $paging != "1000"  ) : // are there comments to navigate through ?>
 		<nav id="comment-nav-below" class="comment-navigation" role="navigation">
 			<h1 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'sparkling' ); ?></h1>
 			<div class="nav-previous"><?php previous_comments_link( esc_html__( '&larr; Older Comments', 'sparkling' ) ); ?></div>

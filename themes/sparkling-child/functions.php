@@ -8,7 +8,7 @@ function theme_enqueue_styles() {
 
 add_action( 'after_setup_theme', function () {
     /* load translation file for the child theme */
-    load_child_theme_textdomain( 'sparkling-child', get_stylesheet_directory() . '/languages' );
+    load_child_theme_textdomain( 'sparkling', get_stylesheet_directory() . '/languages' );
 } );
 
 /* Add favicon from MB severs */

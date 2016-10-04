@@ -327,10 +327,6 @@ function ideablog_expired_posts() {
 add_shortcode('reports', 'reports_query');
 function reports_query() {
 	
-	/*
-	
-	*/
-	
 	// Get id of all profile fields in group 2
 	global $wpdb;
 	$questions_query = "
