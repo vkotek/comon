@@ -120,7 +120,7 @@ class Imgs_Widget extends WP_Widget {
 	 * @param array $instance Previously saved values from database.
 	 */
 	public function form( $instance ) {
-		$title = ! empty( $instance['title'] ) ? $instance['title'] : __( 'New title', 'text_domain' );
+		$title = ! empty( $instance['title'] ) ? $instance['title'] : __( 'New title', 'comon-plugin' );
 		?>
 		<p>
 		<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label> 
@@ -162,8 +162,8 @@ class Posts_Widget extends WP_Widget {
 	function __construct() {
 		parent::__construct(
 			'Posts_Widget', // Base ID
-			__( 'COM.ON - Custom Posts', 'text_domain' ), // Name
-			array( 'description' => __( 'Displays posts according to user\'s details', 'text_domain' ), ) // Args
+			__( 'COM.ON - Custom Posts', 'comon-plugin' ), // Name
+			array( 'description' => __( 'Displays posts according to user\'s details', 'comon-plugin' ), ) // Args
 		);
 	}
 
@@ -194,7 +194,7 @@ class Posts_Widget extends WP_Widget {
 	 * @param array $instance Previously saved values from database.
 	 */
 	public function form( $instance ) {
-		$title = ! empty( $instance['title'] ) ? $instance['title'] : __( 'New title', 'text_domain' );
+		$title = ! empty( $instance['title'] ) ? $instance['title'] : __( 'New title', 'comon-plugin' );
 		?>
 		<p>
 		<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label> 
@@ -313,7 +313,7 @@ function ideablog_expired_posts() {
             if ( $expiry < 0 ) : ?>
                 <li> <?php 
                 if( current_user_can('edit_posts') && get_field('report') ){
-			    printf('<a href="%s"><i class="fa fa-file-word-o" title="Stáhnout shrnutí"></i></a> | ',get_field('report'));
+			    printf('<a href="%s"><i class="fa fa-file-word-o" title="%s"></i></a> | ',get_field('report'), __('Download report', 'comon-plugin') );
 			    } ?>
 			    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> | <?php ideablog_expired(); ?></li>
             <?php
@@ -394,6 +394,9 @@ function ideablog_data_filter() {
 
 	$debug = false;
 	
+	// uncomment to BYPASS filtering system
+	return true;
+	
 	// if User is admin, check if user is set and if yes, turn on debugging, if not set, show all posts. Else set user's id and proceed.
 	if ( is_user_logged_in() ) {
 		if ( current_user_can('edit_posts') ) {
@@ -410,6 +413,14 @@ function ideablog_data_filter() {
 		return true; // If user not logged in, show all posts
 	}
 	
+	
+    // Fast way to see profile extended profile
+    //$extended_profile = email_users_extended_get_extended_profile($user_id);
+    //echo "<pre>";
+    //print_r($extended_profile);
+    //echo "</pre>";
+	
+	
 	// Split users into groups of two (odd & even IDs)
 	if( $user_id % 2 == 0 ) {
 		$user_group = '1'; 
@@ -417,45 +428,59 @@ function ideablog_data_filter() {
 		$user_group = '2'; 
 	}
 
-	
     // Get post info
-	$post_group = get_field('group');
 	$post_gender = get_field('gender');
 	$post_age_min = get_field('age_min');
 	$post_age_max = get_field('age_max');
-	$post_city = get_field('city');
 	$post_edu = get_field('education');
-
+	$post_region = get_field('region');
+	$post_h_income = get_field('h_income');
+	$post_children = get_field('children');
+	$post_bank = get_field('bank');
+	$post_segment = get_field('segment');
+	
 	// Get user info
-	// get_val function extracts the option number so that '13) Male' will return '13' 
+	// get_val function extracts the option number so that '13) Male' will return '13'
 	$user_gender = bp_get_profile_field_data('field=139&user_id='.$user_id);
 	$user_gender = get_val($user_gender);
 	$user_age = bp_get_profile_field_data('field=142&user_id='.$user_id);
-	$user_city = bp_get_profile_field_data('field=143&user_id='.$user_id);
-	$user_city = get_val($user_city);
 	$user_edu = bp_get_profile_field_data('field=186&user_id='.$user_id);
 	$user_edu = get_val($user_edu);
+	$user_region = bp_get_profile_field_data('field=199&user_id='.$user_id);
+	$user_region = get_val($user_region);
+	$user_h_income = bp_get_profile_field_data('field=216&user_id='.$user_id);
+	$user_h_income = get_val($user_h_income);
+	$user_children = bp_get_profile_field_data('field=245&user_id='.$user_id);
+	$user_children = get_val($user_edu);
+	$user_bank = bp_get_profile_field_data('field=254&user_id='.$user_id);
+	$user_bank = get_val($user_edu);
+	$user_segment = bp_get_profile_field_data('field=258&user_id='.$user_id);
+	$user_segment = get_val($user_edu);
+
 	
     // Show post unless any of the criteria below not satisfied
 	$show = true;
 
 	// Test post compatibility
-	if ( !in_array( $user_group , $post_group ) )                               { $show = false; $break = 'group'; }
     if ( !in_array($user_gender, $post_gender) )                                { $show = false; $break = 'gender'; }
     if ($post_age_min >= $user_age || $post_age_max <= $user_age)               { $show = false; $break = 'age'; }
-	if ( !in_array($user_city, $post_city) )                                    { $show = false; $break = 'city'; }
-	if ( !in_array($user_edu, $post_edu) )                                      { $show = false; $break = 'education'; }
+    if ( !in_array($user_edu, $post_edu) )                                      { $show = false; $break = 'education'; }
+    if ( !in_array($user_region, $post_region) )                                { $show = false; $break = 'region'; }
+    if ( !in_array($user_h_income, $post_h_income) )                            { $show = false; $break = 'h_income'; }
+    if ( !in_array($user_children, $post_children) )                            { $show = false; $break = 'children'; }
+    if ( !in_array($user_bank, $post_bank) )                                    { $show = false; $break = 'bank'; }
+    if ( !in_array($user_segment, $post_segment) )                              { $show = false; $break = 'segment'; }
 	
 
 	// If debug is on and above tests break:
 	if ( $debug && !$show ) { 
 		printf("<b>[%d] %s</b><br>", get_the_ID(), get_the_title());
-		if ( true ) { // Replace this with the variables that break
+		if ( true ) {
 			printf("Broke at %s", $break);
 			print("<br>USER: ");
-			var_dump($user_city); 
+			var_dump(${'user_'.$break});
 			print("<br>POST: ");
-			var_dump($post_city); 
+			var_dump(${'post_'.$break});  
 		} else {
 			print("OK");
 		}
@@ -603,41 +628,28 @@ function ideablog_comment($comment, $args, $depth) {
  $GLOBALS['comment'] = $comment; ?>
  <li <?php comment_class(); ?> id="li-comment-<?php comment_ID() ?>">
  <div id="comment-<?php comment_ID(); ?>" class="comment-body">
- <div>
+ 
  <?php echo get_avatar($comment,$size='48',$default='<path_to_url>' ); ?>
  <?php if( user_can($comment->user_id,'edit_posts') ) { echo '<span class="moderator">MODERÁTOR</span>'; } ?>
- <?php // printf(__(' <cite><b>%s</b></cite>'), get_comment_author_link()); ?>
  <?php printf(__(' <cite><b>%s</b></cite> '), bp_core_get_userlink($comment->user_id)); ?>
  <?php 
 	echo '<a href="'.wp_nonce_url( bp_loggedin_user_domain() . bp_get_messages_slug() . '/compose/?r=' . get_comment_author() ) .' title="Private Message""><i class="fa fa-envelope" aria-hidden="true"></i></a>';
-    if( current_user_can('edit_posts') ) {
+    if( current_user_can('edit_posts') && !user_can($comment->user_id,'edit_posts') ) {
         printf(__(' <span>[%s]</span>'), userMeta($comment->user_id)); 
     }
-    if ( current_user_can( 'edit_posts' ) ) {
-    /*
-        printf(' <a href="%s/komentare/?id=%d"><i class="fa fa-list" title="Komentáře: %d" style="padding: 0px 5px;"></i></a>', home_url(),$comment->user_id,user_comment_count());
-        printf(' <i class="fa fa-list" title="Komentáře: %d" style="padding: 0px 5px;"></i>',user_comment_count());        
-    */
-    }
  ?>
- </div>
  <?php if ($comment->comment_approved == '0') : ?>
  <em><?php _e('Your comment is awaiting moderation.') ?></em>
- <br />
  <?php endif; ?>
- <div><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"><?php printf(__('%1$s at %2$s'), get_comment_date(), get_comment_time()) ?></a><?php edit_comment_link(__('(Edit)'),'  ','') ?></div>
+ <a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"><?php printf(__('[%1$s at %2$s]'), get_comment_date(), get_comment_time()) ?></a><?php // edit_comment_link(__('(Edit)'),'  ','') ?>
+	<?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth'], 'reply_text' => '<i class="fa fa-reply"></i>'))) ?>
+
  <?php comment_text() ?>
- <div class="comment-actions">
-	<?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
-	<?php
-	if(function_exists('like_counter_c')) { like_counter_c('text for like'); }
-	?>
- </div>
  </div>
  <?php
 }
 
-// Hide admin bar from subs
+// Hide admin bar from subscribers
 add_action('after_setup_theme', 'remove_admin_bar');
 function remove_admin_bar() {
 if (!current_user_can('administrator') && !is_admin()) {
