@@ -55,6 +55,7 @@ div.countdown {
 .vortex-container-vote-comment {
 	display: inline-block;
 	float: right;
+	margin-left: 5px;
 }
 
 table.profile-fields .label {
@@ -111,12 +112,31 @@ li.menu-item a {
 }
 .comment-list li.comment > div img.avatar {
     left: 15px;
-    top: 15px;
+    top: 10px;
 }
 .comment-body .btn {
 	background-color: white;
 	border: none;
 	color: #828384;
+}
+.comment-navigation {
+	text-align: center;
+	margin-top: 20px;
+}
+#comment-nav-above {
+	margin-bottom: 20px;
+}
+div.comment-body {
+	border: none !important;
+}
+
+li.comment {
+	background-color: white;
+	border: 1px solid #DADADA;
+	margin: 0.4em;
+}
+ol.children {
+	border: none !important;
 }
 
 /* LOGO adjustments */

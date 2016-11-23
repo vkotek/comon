@@ -1,4 +1,9 @@
 <?php
+
+/*
+This file contains code for displaying piecharts on the statistics page.
+*/
+
 $parse_uri = explode( 'wp-content', $_SERVER['SCRIPT_FILENAME'] );
 require_once( $parse_uri[0] . 'wp-load.php' );
 global $wpdb;
@@ -102,7 +107,7 @@ global $wpdb;
 		?>
         ]);
 
-        var options = {title:'Pohlavie',
+        var options = {title:'Gender',
                        width:300,
                        height:250,
 					   colors: ['#a2ad00', '#6a8012', '#646464', '#c4c4c4', '#808080','#999999','#b3b3b3','#cccccc'],
@@ -138,7 +143,7 @@ global $wpdb;
 		?>
         ]);
 
-        var options = {title:'Vek',
+        var options = {title:'Age',
                        width:300,
                        height:250,
 					   colors: ['#a2ad00', '#6a8012', '#646464', '#c4c4c4', '#808080','#999999','#b3b3b3','#cccccc'],
@@ -172,7 +177,7 @@ global $wpdb;
 		?>
         ]);
 
-        var options = {title:'Mesto',
+        var options = {title:'City',
                        width:300,
                        height:250,
 					   colors: ['#a2ad00', '#6a8012', '#646464', '#c4c4c4', '#808080','#999999','#b3b3b3','#cccccc'],
@@ -206,7 +211,7 @@ global $wpdb;
 		?>
         ]);
 
-        var options = {title:'Vzdelanie',
+        var options = {title:'Education',
                        width:300,
                        height:250,
 					   colors: ['#a2ad00', '#6a8012', '#646464', '#c4c4c4', '#808080','#999999','#b3b3b3','#cccccc'],

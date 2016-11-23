@@ -37,15 +37,16 @@ if ( post_password_required() ) {
 	<?php if ( have_comments() ) : ?>
 		<h3 class="comments-title">
 			<?php
-				printf( _nx( 'One thought', '%1$s thoughts', get_comments_number(), 'comments title', 'sparkling' ),
+				printf( _nx( 'One thought', '%1$s thoughts', get_comments_number(), 'comments title', 'sparkling-child' ),
 					number_format_i18n( get_comments_number() ));
 				if( current_user_can('edit_posts') ) {
-				printf( _nx( ' from %1$s user', ' from %1$s users', comments_unique_users(), 'comments user count', 'sparkling' ),
+				printf( _nx( ' from %1$s user', ' from %1$s users', comments_unique_users(), 'comments user count', 'sparkling-child' ),
 					number_format_i18n( comments_unique_users() ));
 				/* printf('<span>  Uživatelů: %s</span>', comments_unique_users()); */
 				printf('  <a href="%s?page=off" title="Show comments on one page"><i class="fa fa-clone fa-x2"></i></a>', get_permalink() );
 				$csv = plugins_url('comon-plugin/csv-comments.php')."?post=".get_the_ID();
 				printf('  <a href="'.$csv.'" title="Download comments in CSV"><i class="fa fa-file-excel-o fa-x2"></i></a>', get_permalink() );
+					print('  <a href="javascript:window.print()"><i class="fa fa-print fa-x2"></i></a>');
 				} 
 				
 			?>
@@ -53,9 +54,7 @@ if ( post_password_required() ) {
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) && $paging != "1000" ) : // are there comments to navigate through ?>
 		<nav id="comment-nav-above" class="comment-navigation" role="navigation">
-			<h1 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'sparkling' ); ?></h1>
-			<div class="nav-previous"><?php previous_comments_link( esc_html__( '&larr; Older Comments', 'sparkling' ) ); ?></div>
-			<div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments &rarr;', 'sparkling' ) ); ?></div>
+			<?php paginate_comments_links(); ?> 
 		</nav><!-- #comment-nav-above -->
 		<?php endif; // check for comment navigation ?>
 
@@ -71,11 +70,9 @@ if ( post_password_required() ) {
 			?>
 		</ol><!-- .comment-list -->
 
-		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) && $paging != "1000"  ) : // are there comments to navigate through ?>
+		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) && $paging != "1000"  ) : // are there comments to navigate through ?> 
 		<nav id="comment-nav-below" class="comment-navigation" role="navigation">
-			<h1 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'sparkling' ); ?></h1>
-			<div class="nav-previous"><?php previous_comments_link( esc_html__( '&larr; Older Comments', 'sparkling' ) ); ?></div>
-			<div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments &rarr;', 'sparkling' ) ); ?></div>
+			<?php paginate_comments_links(); ?> 
 		</nav><!-- #comment-nav-below -->
 		<?php endif; // check for comment navigation ?>
 
