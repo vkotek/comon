@@ -16,7 +16,7 @@ include( plugin_dir_path( __FILE__ ) . 'emails.php');
 
 // Shortcodes
 // include( plugin_dir_path( __FILE__ ) . 'shortcodes.php');
- 
+
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 // define plugin url
@@ -30,12 +30,12 @@ function my_load_plugin_textdomain() {
 add_action( 'plugins_loaded', 'my_load_plugin_textdomain' );
 
 /*
- __    __ _     _            _       
-/ / /\ \ (_) __| | __ _  ___| |_ ___ 
+ __    __ _     _            _
+/ / /\ \ (_) __| | __ _  ___| |_ ___
 \ \/  \/ / |/ _` |/ _` |/ _ \ __/ __|
  \  /\  /| | (_| | (_| |  __/ |_\__ \
-  \/  \/ |_|\__,_|\__, |\___|\__|___/ 
-                  |___/              
+  \/  \/ |_|\__,_|\__, |\___|\__|___/
+                  |___/
 */
 
 /* Show attachment images widget */
@@ -46,7 +46,7 @@ function register_Imgs_Widget() {
 }
 add_action( 'widgets_init', 'register_Imgs_Widget' );
 class Imgs_Widget extends WP_Widget {
-	
+
 
 	function __construct() {
 		parent::__construct(
@@ -55,7 +55,7 @@ class Imgs_Widget extends WP_Widget {
 			array( 'description' => __( 'Displays all image attachements from current post + ZIP download for admins', 'comon-plugin' ), ) // Args
 		);
 	}
-	
+
 	/**
 	 * Front-end display of widget.
 	 *
@@ -65,29 +65,29 @@ class Imgs_Widget extends WP_Widget {
 	 * @param array $instance Saved values from database.
 	 */
 	public function widget( $args, $instance ) {
-		
+
 		if ( is_single() ) {
-			
+
 			echo $args['before_widget'];
 			if ( ! empty( $instance['title'] ) ) {
 				echo $args['before_title'] . apply_filters( 'widget_title', $instance['title'] ). $args['after_title'];
 			}
-			
+
 			$queried_object = get_queried_object();
 			$post_id = $queried_object->ID;
-			
+
 			$post_args = array (
 				'post_id'	=> $post_id,
 			);
-			
+
 			$comment_query = new WP_Comment_Query;
 			$comments = $comment_query->query( $post_args );
-		
-		
+
+
 			// If comments then...
 			if ( $comments ) {
 				$imgs = array();
-				
+
 				// Comnent loop
 				foreach ( $comments as $comment ) {
 					$attachmentId =  get_comment_meta($comment->comment_ID, 'attachmentId', TRUE);
@@ -98,11 +98,11 @@ class Imgs_Widget extends WP_Widget {
 						$attachmentThumb = wp_get_attachment_image($attachmentId, ATT_TSIZE);
 						$real_path = get_attached_file( $attachmentId );
 						$imgs[] = array($attachmentLink,$attachmentThumb,$real_path);
-					} 
+					}
 				}
-				
 
-			
+
+
 				// If there are images in array, print title and thumbs
 				if($imgs) {
 					foreach ($imgs as $img) {
@@ -117,7 +117,7 @@ class Imgs_Widget extends WP_Widget {
 			echo $args['after_widget'];
 		}
 	}
-	
+
 	/**
 	 * Back-end widget form.
 	 *
@@ -129,10 +129,10 @@ class Imgs_Widget extends WP_Widget {
 		$title = ! empty( $instance['title'] ) ? $instance['title'] : __( 'New title', 'text_domain' );
 		?>
 		<p>
-		<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label> 
+		<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label>
 		<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>">
 		</p>
-		<?php 
+		<?php
 	}
 
 	/**
@@ -151,8 +151,8 @@ class Imgs_Widget extends WP_Widget {
 
 		return $instance;
 	}
-	
-	
+
+
 }
 
 
@@ -203,10 +203,10 @@ class Posts_Widget extends WP_Widget {
 		$title = ! empty( $instance['title'] ) ? $instance['title'] : __( 'New title', 'text_domain' );
 		?>
 		<p>
-		<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label> 
+		<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label>
 		<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>">
 		</p>
-		<?php 
+		<?php
 	}
 
 	/**
@@ -231,24 +231,24 @@ class Posts_Widget extends WP_Widget {
 
 
 /*
- __ _                _                _           
-/ _\ |__   ___  _ __| |_ ___ ___   __| | ___  ___ 
+ __ _                _                _
+/ _\ |__   ___  _ __| |_ ___ ___   __| | ___  ___
 \ \| '_ \ / _ \| '__| __/ __/ _ \ / _` |/ _ \/ __|
 _\ \ | | | (_) | |  | || (_| (_) | (_| |  __/\__ \
 \__/_| |_|\___/|_|   \__\___\___/ \__,_|\___||___/
-                                                  
+
 */
 
 // Shortcode for statistics
 add_shortcode('stats','comon_stats');
 function comon_stats() {
     global $wpdb;
-	
+
 	// Gets IDs of all members that are in wp_users (not deleted) and that aren't admins
 	$active_users_id = "
 		SELECT user_id
 		FROM wp_usermeta
-		WHERE wp_usermeta.meta_key = 'wp_user_level' 
+		WHERE wp_usermeta.meta_key = 'wp_user_level'
 		AND wp_usermeta.meta_value != 10
 		AND user_id IN (
 			SELECT id
@@ -263,9 +263,9 @@ function comon_stats() {
 	    WHERE id IN (
 	        ".$active_users_id."
 	    )";
-	
+
     $mem_count = $wpdb->get_results($query_mem_count);
-		
+
 	// COUNT ACTIVE MEMBERS v2
     $query_active_users = "
         SELECT COUNT(DISTINCT(user_id)) AS Amount
@@ -284,7 +284,7 @@ function comon_stats() {
 
     printf('<b>Members:</b> %d / %d <small>[ filled in profile / all members ]</small><br>', $mem_count_active[0]->Amount, $mem_count[0]->Amount);
     printf( '<a href="%s">User activity table</a>', zipfile_url."/activity-stats.php" );
-	
+
 }
 
 // Shortcode to display active posts list
@@ -295,7 +295,7 @@ function ideablog_active_posts() {
         if ( ideablog_data_filter() ) :
             $expiry = ideablog_time_filter();
             if ( $expiry > 0 ) : ?>
-                <li><?php 
+                <li><?php
                 if( current_user_can('edit_posts') && get_field('report') ){
 			    printf('<a href="%s"><i class="fa fa-file-word-o" title="Stáhnout shrnutí"></i></a> | ',get_field('report'));
 			    } ?>
@@ -310,14 +310,14 @@ function ideablog_active_posts() {
 // Shortcode to display expired posts list
 add_shortcode( 'expired_posts', 'ideablog_expired_posts' );
 function ideablog_expired_posts() {
-    
+
     echo "<ul>";
     $the_query = new WP_Query( array( 'posts_per_page' => -1 ) );
     while ($the_query -> have_posts()) : $the_query -> the_post();
         if ( ideablog_data_filter() ) :
             $expiry = ideablog_time_filter();
             if ( $expiry < 0 ) : ?>
-                <li> <?php 
+                <li> <?php
                 if( current_user_can('edit_posts') && get_field('report') ){
 			    printf('<a href="%s"><i class="fa fa-file-word-o" title="Stáhnout shrnutí"></i></a> | ',get_field('report'));
 			    } ?>
@@ -332,11 +332,11 @@ function ideablog_expired_posts() {
 // Not sure if this is used anywhere??
 add_shortcode('reports', 'reports_query');
 function reports_query() {
-	
+
 	/*
-	
+
 	*/
-	
+
 	// Get id of all profile fields in group 2
 	global $wpdb;
 	$questions_query = "
@@ -345,24 +345,24 @@ function reports_query() {
 		WHERE group_id = 2 AND parent_id = 0
 	";
 	$questions = $wpdb->get_results($questions_query);
-	
-	
+
+
 	// Current user's ID
 	$user_id = bp_loggedin_user_id();
-	
+
 	var_dump($questions);
 	echo "<hr>";
-	
-	
-	
+
+
+
 	// Go through each question
 	foreach($questions as $q) {
 		$q_data = bp_get_profile_field_data('field='.$q->id.'&user_id='.$user_id);
-		
+
 		echo "<br>".$q->id." -> ".$q_data;
 	}
 	echo "<hr>";
-	
+
 	$user_q1 = get_val(bp_get_profile_field_data('field=2&user_id='.$user_id));
 	echo "Q1: ".$user_q1."<br>";
 	$user_q2 = bp_get_profile_field_data('field=5&user_id='.$user_id);
@@ -371,23 +371,23 @@ function reports_query() {
 	echo "Q3: ".$user_q3."<br>";
 	$user_q4 = get_val(bp_get_profile_field_data('field=11&user_id='.$user_id));
 	echo "Q4: ".$user_q4."<br>";
-	
+
 }
 
 /*
-        _                ___                 _   _                 
-  /\/\ (_)___  ___      / __\   _ _ __   ___| |_(_) ___  _ __  ___ 
+        _                ___                 _   _
+  /\/\ (_)___  ___      / __\   _ _ __   ___| |_(_) ___  _ __  ___
  /    \| / __|/ __|    / _\| | | | '_ \ / __| __| |/ _ \| '_ \/ __|
 / /\/\ \ \__ \ (__ _  / /  | |_| | | | | (__| |_| | (_) | | | \__ \
 \/    \/_|___/\___(_) \/    \__,_|_| |_|\___|\__|_|\___/|_| |_|___/
-                                                                   
+
 */
 
 // Counts the items of serialized arrays from SQL statement in iframe stats for Q11
 function ideablog_count_array($data) {
     $arr_count = array();
     foreach($data as $row) {
-        $tmp = unserialize($row['Item']);   
+        $tmp = unserialize($row['Item']);
         foreach($tmp as $item) {
             if(isset($arr_count[$item])) { $arr_count[$item]++; } else { $arr_count[$item] = 1; }
         }
@@ -399,11 +399,11 @@ function ideablog_count_array($data) {
 function ideablog_data_filter() {
 
 	$debug = false;
-	
+
 	// if User is admin, check if user is set and if yes, turn on debugging, if not set, show all posts. Else set user's id and proceed.
 	if ( is_user_logged_in() ) {
 		if ( current_user_can('edit_posts') ) {
-			if ( is_numeric($_GET['user']) ) { 
+			if ( is_numeric($_GET['user']) ) {
 				$user_id = $_GET['user'];
 				$debug = true;
 			} else {
@@ -415,15 +415,15 @@ function ideablog_data_filter() {
 	} else {
 		return true; // If user not logged in, show all posts
 	}
-	
+
 	// Split users into groups of two (odd & even IDs)
 	if( $user_id % 2 == 0 ) {
-		$user_group = '1'; 
-	} else { 
-		$user_group = '2'; 
+		$user_group = '1';
+	} else {
+		$user_group = '2';
 	}
 
-	
+
     // Get post info
 	$post_group = get_field('group');
 	$post_gender = get_field('gender');
@@ -433,7 +433,7 @@ function ideablog_data_filter() {
 	$post_edu = get_field('education');
 
 	// Get user info
-	// get_val function extracts the option number so that '13) Male' will return '13' 
+	// get_val function extracts the option number so that '13) Male' will return '13'
 	$user_gender = bp_get_profile_field_data('field=139&user_id='.$user_id);
 	$user_gender = get_val($user_gender);
 	$user_age = bp_get_profile_field_data('field=142&user_id='.$user_id);
@@ -441,34 +441,34 @@ function ideablog_data_filter() {
 	$user_city = get_val($user_city);
 	$user_edu = bp_get_profile_field_data('field=186&user_id='.$user_id);
 	$user_edu = get_val($user_edu);
-	
+
     // Show post unless any of the criteria below not satisfied
 	$show = true;
 
 	// Test post compatibility
 	if ( !in_array( $user_group , $post_group ) )                               { $show = false; $break = 'group'; }
-    if ( !in_array($user_gender, $post_gender) )                                { $show = false; $break = 'gender'; }
-    if ($post_age_min > $user_age || $post_age_max < $user_age)               { $show = false; $break = 'age'; }
+  if ( !in_array($user_gender, $post_gender) )                                { $show = false; $break = 'gender'; }
+  if ($post_age_min > $user_age || $post_age_max < $user_age)                 { $show = false; $break = 'age'; }
 	if ( !in_array($user_city, $post_city) )                                    { $show = false; $break = 'city'; }
 	if ( !in_array($user_edu, $post_edu) )                                      { $show = false; $break = 'education'; }
-	
+
 
 	// If debug is on and above tests break:
-	if ( $debug && !$show ) { 
+	if ( $debug && !$show ) {
 		printf("<b>[%d] %s</b><br>", get_the_ID(), get_the_title());
 		if ( true ) { // Replace this with the variables that break
 			printf("Broke at %s", $break);
 			print("<br>USER: ");
-			var_dump(${"user_".$break}); 
+			var_dump(${"user_".$break});
 			print("<br>POST: ");
-			var_dump(${"post_".$break}); 
+			var_dump(${"post_".$break});
 		} else {
 			print("OK");
 		}
 		print("<hr>");
 		return false;
 	}
-	
+
     // Did any of the above fail?
 	if ( $show ) { return true; } else { return false; }
 }
@@ -477,11 +477,11 @@ function ideablog_data_filter() {
 function get_val(&$value) {
 	if( !is_array($value) ) {
 		$pos = strpos($value, ")");
-		if(!$pos) { 
-			$pos = strpos($value, " "); 
+		if(!$pos) {
+			$pos = strpos($value, " ");
 		}
-		if($pos) {	
-			$value =  substr($value,0,$pos); 
+		if($pos) {
+			$value =  substr($value,0,$pos);
 		}
 	} else {
 		array_walk($value, 'get_val');
@@ -539,19 +539,19 @@ function get_text(&$value) {
 
 // Get user meta data for comments
 function userMeta($user_id) {
-	
+
 	$meta = array();
-	
+
 	/* DEFAULT META */
 
 	// Gender
     $user_gender = bp_get_profile_field_data('field=139&user_id='.$user_id);
     $meta[] = get_text($user_gender);
-	
+
 	// Age
 	$user_age = bp_get_profile_field_data('field=142&user_id='.$user_id);
 	$meta[] = $user_age;
-	
+
 	// City size
 	$user_city = bp_get_profile_field_data('field=143&user_id='.$user_id);
 	switch ( get_value($user_city) ) {
@@ -575,7 +575,7 @@ function userMeta($user_id) {
 			break;
 	}
 	$meta[] = $user_city;
-	
+
 	// Education level
 	$user_edu = bp_get_profile_field_data('field=186&user_id='.$user_id);
 	switch ( get_value($user_edu) ) {
@@ -593,8 +593,8 @@ function userMeta($user_id) {
 			break;
 	}
 	$meta[] = $user_edu;
-	
-	
+
+
 
 	/* CUSTOM META */
 
@@ -603,24 +603,24 @@ function userMeta($user_id) {
 	// FORMAT:
 	// $user_q{x} = bp_get_profile_field_data('field={y}&user_id='.$user_id);
 	// $meta[] = $user_q{x};
-	
-	
+
+
     return(join(', ',$meta));
-} 
+}
 
 // Custom comments template
 function ideablog_comment($comment, $args, $depth) {
  $GLOBALS['comment'] = $comment; ?>
  <li <?php comment_class(); ?> id="li-comment-<?php comment_ID() ?>">
  <div id="comment-<?php comment_ID(); ?>" class="comment-body">
- 
+
  <?php echo get_avatar($comment,$size='48',$default='<path_to_url>' ); ?>
  <?php if( user_can($comment->user_id,'edit_posts') ) { echo '<span class="moderator">MODERÁTOR</span>'; } ?>
  <?php printf(__(' <cite><b>%s</b></cite> '), bp_core_get_userlink($comment->user_id)); ?>
- <?php 
+ <?php
 	echo '<a href="'.wp_nonce_url( bp_loggedin_user_domain() . bp_get_messages_slug() . '/compose/?r=' . get_comment_author() ) .' title="Private Message""><i class="fa fa-envelope" aria-hidden="true"></i></a>';
     if( current_user_can('edit_posts') && !user_can($comment->user_id,'edit_posts') ) {
-        printf(__(' <span>[%s]</span>'), userMeta($comment->user_id)); 
+        printf(__(' <span>[%s]</span>'), userMeta($comment->user_id));
     }
  ?>
  <?php if ($comment->comment_approved == '0') : ?>
