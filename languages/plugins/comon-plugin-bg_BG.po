@@ -1,0 +1,81 @@
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=2; plural=n != 1\n"
+"Project-Id-Version: COM.ON plugin\n"
+"POT-Creation-Date: 2017-01-10 16:47+0100\n"
+"PO-Revision-Date: 2017-01-30 13:51+0000\n"
+"Last-Translator: test.admin <hpacakova+test.admin@gmail.com>\n"
+"Language-Team: Bulgarian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco - https://localise.biz/\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: comon-plugin.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"Report-Msgid-Bugs-To: \n"
+"Language: bg-BG"
+
+#. Description of the plugin/theme
+msgid ""
+"Includes customized latest posts widget and IMG zip download widget, as well "
+"as export function for Excel API."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Vojtěch Kotek"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://kotek.co"
+msgstr ""
+
+# This.
+#: shortcodes.php:66 shortcodes.php:86
+#, php-format
+msgid "<b>%s</b> day left"
+msgid_plural "<b>%s</b> days left"
+msgstr[0] ""
+"<b>%s</b> оставащ ден\n"
+"\n"
+msgstr[1] "<b>%s</b> оставащи дни"
+
+#: widgets.php:24
+msgid "COM.ON - Images from Comments"
+msgstr "COM.ON - Образи от коментари"
+
+#: widgets.php:25
+msgid ""
+"Displays all image attachements from current post + ZIP download for admins"
+msgstr ""
+"Показва всички прикачени образи от настоящия пост + ZIP сваляне за "
+"администратори"
+
+#: widgets.php:83
+msgid "Download"
+msgstr "Сваляне на файл"
+
+#: widgets.php:99 widgets.php:173
+msgid "New title"
+msgstr "Ново заглавие"
+
+#: widgets.php:102 widgets.php:176
+msgid "Title:"
+msgstr "Заглавие:"
+
+#: widgets.php:141
+msgid "COM.ON - Custom Posts"
+msgstr "COM.ON - Персонализирани публикации"
+
+#: widgets.php:142
+msgid "Displays posts according to user's details"
+msgstr "Показва постовете според потребителските детайли/ профил"
+
+#. Plugin Name of the plugin/theme
+msgid "COM.ON plugin"
+msgstr "COM.ON плъгин"

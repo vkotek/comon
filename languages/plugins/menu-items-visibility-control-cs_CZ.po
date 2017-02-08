@@ -1,0 +1,113 @@
+# Translation of Development (trunk) in Czech
+# This file is distributed under the same license as the Development (trunk) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2016-03-27 18:33:12+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: GlotPress/1.1.0-alpha\n"
+"Project-Id-Version: Development (trunk)\n"
+
+#. Plugin Name of the plugin/theme
+msgid "Menu Items Visibility Control"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Control the display logic of individual menu items."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Hassan Derakhshandeh"
+msgstr ""
+
+#: init.php:59
+msgid "Visibility"
+msgstr "Viditelnost"
+
+#: includes/walker-nav-menu-edit.php:193
+msgid "Cancel"
+msgstr "Storno"
+
+#: includes/walker-nav-menu-edit.php:192
+msgid "Remove"
+msgstr "Odebrat"
+
+#: includes/walker-nav-menu-edit.php:172
+msgid "To the top"
+msgstr "Na začátek"
+
+#: includes/walker-nav-menu-edit.php:179
+msgid "Original: %s"
+msgstr "Původní podoba: %s"
+
+#: includes/walker-nav-menu-edit.php:168
+msgid "Up one"
+msgstr "Nahoru"
+
+#: includes/walker-nav-menu-edit.php:169
+msgid "Down one"
+msgstr "Dolů"
+
+#: includes/walker-nav-menu-edit.php:167
+msgid "Move"
+msgstr "Přesunout"
+
+#: includes/walker-nav-menu-edit.php:159
+msgid "The description will be displayed in the menu if the current theme supports it."
+msgstr "Popis bude na webu zobrazen jako součást menu pouze v případě, že to aktuálně používaná šablona podporuje."
+
+#: includes/walker-nav-menu-edit.php:151
+msgid "Link Relationship (XFN)"
+msgstr "Vztah k odkazu (XFN)"
+
+#: includes/walker-nav-menu-edit.php:157
+msgid "Description"
+msgstr "Popis události"
+
+#: includes/walker-nav-menu-edit.php:145
+msgid "CSS Classes (optional)"
+msgstr "CSS třídy (volitelné)"
+
+#: includes/walker-nav-menu-edit.php:133
+msgid "Title Attribute"
+msgstr "Atribut title"
+
+#: includes/walker-nav-menu-edit.php:140
+msgid "Open link in a new tab"
+msgstr "Otevřít odkaz na nové záložce"
+
+#: includes/walker-nav-menu-edit.php:127
+msgid "Navigation Label"
+msgstr "Název položky"
+
+#: includes/walker-nav-menu-edit.php:120
+msgid "URL"
+msgstr "Adresa (URL)"
+
+#: includes/walker-nav-menu-edit.php:107
+msgid "Move down"
+msgstr "Posunout dolů"
+
+#: includes/walker-nav-menu-edit.php:109 includes/walker-nav-menu-edit.php:111
+msgid "Edit Menu Item"
+msgstr "Upravit položku menu"
+
+#: includes/walker-nav-menu-edit.php:79
+msgid "sub item"
+msgstr "podřazená položka"
+
+#: includes/walker-nav-menu-edit.php:94
+msgid "Move up"
+msgstr "Posunout nahoru"
+
+#. translators: %s: title of menu item in draft status
+#: includes/walker-nav-menu-edit.php:66
+msgid "%s (Pending)"
+msgstr "%s (Nepublikováno)"
+
+#. translators: %s: title of menu item which is invalid
+#: includes/walker-nav-menu-edit.php:62
+msgid "%s (Invalid)"
+msgstr "%s (Neplatná položka)"

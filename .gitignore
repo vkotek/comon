@@ -1,6 +1,10 @@
-# Dont ignore these folders
-!plugins/comon-plugin/*
-!themes/sparkling-child/*
-
-# Blacklist all else
-/*
+*
+!.gitattributes
+!.gitignore
+!readme.md
+!.gitkeep
+!*.php
+!*.pot
+!*.po
+!*.mo
+!*/

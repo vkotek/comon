@@ -1,0 +1,479 @@
+# Translation of Stable (latest release) in Czech
+# This file is distributed under the same license as the Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2016-02-02 18:28:09+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: GlotPress/1.0-alpha-1100\n"
+"Project-Id-Version: Stable (latest release)\n"
+
+#: includes/admin/class-bnfw-notification.php:890
+msgid "New Term"
+msgstr "Nová položka"
+
+#: includes/admin/class-bnfw-notification.php:423
+msgid "You must choose at least one User or User Role to send the notification to before you can save"
+msgstr "Musíte vybrat alespoň jednoho uživatele nebo Uživatelskou úroveň, kam odesílat upozornění, než jej uložíte"
+
+#: includes/admin/class-bnfw-notification.php:171
+#: includes/admin/class-bnfw-notification.php:842
+msgid "User Role Changed"
+msgstr "Uživatelská úroveň byla změněna"
+
+#: includes/overrides.php:113
+msgid "[%s] Your username and password"
+msgstr "[%s] Vaše jméno a heslo"
+
+#. Plugin Name of the plugin/theme
+msgid "Better Notifications for WordPress"
+msgstr "Better Notifications for WordPress"
+
+#. Plugin URI of the plugin/theme
+msgid "http://wordpress.org/plugins/bnfw/"
+msgstr "https://cs.wordpress.org/plugins/bnfw/"
+
+#. Description of the plugin/theme
+msgid "Send customisable emails to your users for different WordPress notifications."
+msgstr "Posílejte přizpůsobitelné HTML e-maily svým uživatelům pro různá WordPress oznámení."
+
+#. Author of the plugin/theme
+msgid "Voltronik"
+msgstr "Voltronik"
+
+#. Author URI of the plugin/theme
+msgid "https://betternotificationsforwp.com/"
+msgstr "https://betternotificationsforwp.com/"
+
+#: includes/tmp.php:7
+msgid "Show additional email fields"
+msgstr "Zobrazit dodatečná e-mailová pole"
+
+#: includes/overrides.php:80
+msgid "[%s] Your username and password info"
+msgstr "[%s] Uživatelské jméno a heslo"
+
+#: includes/overrides.php:110
+msgid "Password: %s"
+msgstr "Heslo: %s"
+
+#: includes/overrides.php:46 includes/overrides.php:96
+msgid "[%s] New User Registration"
+msgstr "[%s] Nová uživatelská registrace"
+
+#: includes/overrides.php:75
+msgid "To set your password, visit the following address:"
+msgstr "Možnost vytvoření hesla získáte kliknutím na následující odkaz:"
+
+#: includes/overrides.php:43 includes/overrides.php:74
+#: includes/overrides.php:93 includes/overrides.php:109
+msgid "Username: %s"
+msgstr "Uživatel %s"
+
+#: includes/overrides.php:44 includes/overrides.php:94
+msgid "E-mail: %s"
+msgstr "E-mail: %s"
+
+#: includes/license/class-bnfw-license-setting.php:76
+msgid "Deactivate License"
+msgstr "Deaktivovat licenci"
+
+#: includes/license/class-bnfw-license.php:96
+msgid "%1$s License Key"
+msgstr "%1$s klíč licence"
+
+#: includes/overrides.php:42 includes/overrides.php:92
+msgid "New user registration on your site %s:"
+msgstr "Nově registrovaný uživatel na webu %s:"
+
+#: includes/license/class-bnfw-license-setting.php:18
+msgid "Addon Licenses"
+msgstr "Licence doplňků"
+
+#: includes/libraries/EDD_SL_Plugin_Updater.php:181
+msgid "There is a new version of %1$s available. <a target=\"_blank\" class=\"thickbox\" href=\"%2$s\">View version %3$s details</a>."
+msgstr "K dispozici je nová verze %1$s available. <a target=\"_blank\" class=\"thickbox\" href=\"%2$s\">zobrazit detaily verze %3$s </a>."
+
+#: includes/libraries/EDD_SL_Plugin_Updater.php:188
+msgid "There is a new version of %1$s available. <a target=\"_blank\" class=\"thickbox\" href=\"%2$s\">View version %3$s details</a> or <a href=\"%4$s\">update now</a>."
+msgstr "K dispozici je nová verze %1$s available. <a target=\"_blank\" class=\"thickbox\" href=\"%2$s\">zobrazit detaily verze %3$s </a> nebo <a href=\"%4$s\">aktualizovat nyní</a>."
+
+#: includes/libraries/EDD_SL_Plugin_Updater.php:326
+msgid "You do not have permission to install plugin updates"
+msgstr "Nemáte oprávnění k instalaci aktualizací pluginu"
+
+#: includes/libraries/EDD_SL_Plugin_Updater.php:326
+msgid "Error"
+msgstr "Chyba"
+
+#: includes/import.php:60
+msgid " for "
+msgstr "pro"
+
+#: includes/import.php:60
+msgid " (Auto Imported)"
+msgstr "(Automaticky importováno)"
+
+#: includes/helpers/ajax-helpers.php:28
+msgid "User Roles"
+msgstr "Uživatelské role"
+
+#: includes/helpers/ajax-helpers.php:51
+msgid "Users"
+msgstr "Podle uživatele"
+
+#: includes/admin/class-bnfw-notification.php:728
+msgid "Notification Type"
+msgstr "Typ oznámení"
+
+#: includes/admin/class-bnfw-notification.php:729
+msgid "Enabled?"
+msgstr "Aktivováno?"
+
+#: includes/admin/class-bnfw-notification.php:731
+msgid "User Roles / Users"
+msgstr "Uživatelské úrovně / Uživatelé"
+
+#: includes/admin/class-bnfw-notification.php:833
+msgid "User Registration - For User"
+msgstr "Registrace nového uživatele - pro uživatele"
+
+#: includes/admin/class-bnfw-notification.php:839
+msgid "User Registration - For Admin"
+msgstr "Registrace nového uživatele - pro administrátora"
+
+#: includes/admin/class-bnfw-notification.php:876
+msgid "Updated "
+msgstr "Aktualizováno"
+
+#: includes/admin/class-bnfw-notification.php:879
+msgid " Pending Review"
+msgstr "Čekající na schválení"
+
+#: includes/admin/class-bnfw-notification.php:882
+msgid " Scheduled"
+msgstr "Naplánováno"
+
+#: includes/admin/class-bnfw-notification.php:885
+msgid " Comment"
+msgstr "Komentář"
+
+#: includes/admin/class-bnfw-notification.php:892
+msgid "New Term in "
+msgstr "Nová položka v"
+
+#: includes/admin/class-bnfw-notification.php:646
+msgid "Move to Trash"
+msgstr "Odstranit do koše"
+
+#: includes/admin/class-bnfw-notification.php:644
+msgid "Delete Permanently"
+msgstr "Smazat trvale"
+
+#: includes/admin/class-bnfw-notification.php:626
+msgid "Disable Notification"
+msgstr "Zakázat oznámení"
+
+#: includes/admin/class-bnfw-notification.php:634
+msgid "Send Me a Test Email"
+msgstr "Poslat mi zkušební e-mail"
+
+#: includes/admin/class-bnfw-notification.php:615
+#: includes/admin/class-bnfw-notification.php:654
+#: includes/admin/class-bnfw-notification.php:655
+msgid "Save"
+msgstr "Uložit"
+
+#: includes/admin/class-bnfw-notification.php:516
+msgid "Test Notification Sent."
+msgstr "Zkušební oznámení bylo odesláno."
+
+#: includes/admin/class-bnfw-notification.php:597
+msgid "Notification saved."
+msgstr "Oznámení uloženo."
+
+#: includes/admin/class-bnfw-notification.php:374
+msgid "Stop additional paragraph and line break HTML from being inserted into my notifications"
+msgstr "Nevkládat další odstavec a HTML zalomení do těchto oznámení"
+
+#: includes/admin/class-bnfw-notification.php:364
+msgid "Shortcode Help"
+msgstr "Shortcode nápověda"
+
+#: includes/admin/class-bnfw-notification.php:354
+msgid "Message Body"
+msgstr "Tělo zprávy"
+
+#: includes/admin/class-bnfw-notification.php:361
+msgid "Documentation"
+msgstr "Dokumentace"
+
+#: includes/admin/class-bnfw-notification.php:358
+msgid "Need some help?"
+msgstr "Nevíte si rady?"
+
+#: includes/admin/class-bnfw-notification.php:228
+msgid "New"
+msgstr "Nová"
+
+#: includes/admin/class-bnfw-notification.php:345
+#: includes/admin/class-bnfw-notification.php:730
+msgid "Subject"
+msgstr "Předmět"
+
+#: includes/admin/class-bnfw-notification.php:246
+msgid "This notification doesn't support additional email fields."
+msgstr "Toto oznámení nepodporuje další e-mailová pole v předmětu e-mailu."
+
+#: includes/admin/class-bnfw-notification.php:253
+msgid "Email Formatting"
+msgstr "Formátování e-mailu"
+
+#: includes/admin/class-bnfw-notification.php:270 includes/tmp.php:3
+msgid "Additional Email Fields"
+msgstr "Dodatečná e-mailová pole"
+
+#: includes/admin/class-bnfw-notification.php:274
+msgid "Set \"From\" Name & Email, CC, BCC"
+msgstr "Nastavit \"Od\" Jméno a E-mail, kopii, skrytou kopii"
+
+#: includes/admin/class-bnfw-notification.php:280 includes/tmp.php:13
+msgid "From Name and Email"
+msgstr "Od Jméno a E-mail"
+
+#: includes/admin/class-bnfw-notification.php:290 includes/tmp.php:23
+msgid "CC"
+msgstr "Kopie"
+
+#: includes/admin/class-bnfw-notification.php:302 includes/tmp.php:34
+msgid "BCC"
+msgstr "Skrytá kopie"
+
+#: includes/admin/class-bnfw-notification.php:317
+msgid "Send this notification to the Author only"
+msgstr "Odeslat toto oznámení pouze autorovi příspěvku"
+
+#: includes/admin/class-bnfw-notification.php:324
+msgid "Send To"
+msgstr "Odeslat"
+
+#: includes/admin/class-bnfw-notification.php:338
+msgid "Disable this Notification for the User that triggered it"
+msgstr "Vypnout oznámení pro uživatele který jej inicioval"
+
+#: includes/admin/class-bnfw-notification.php:207
+msgid "Scheduled"
+msgstr "Stanovit termín"
+
+#: includes/admin/class-bnfw-notification.php:208
+#: includes/admin/class-bnfw-notification.php:815
+msgid "New Comment"
+msgstr "Nový komentář"
+
+#: includes/admin/class-bnfw-notification.php:223
+msgid "Custom Taxonomy"
+msgstr "Vlastní taxonomie"
+
+#: includes/admin/class-bnfw-notification.php:204
+#: includes/admin/class-bnfw-notification.php:873
+msgid "New "
+msgstr "Nový"
+
+#: includes/admin/class-bnfw-notification.php:205
+msgid "Update "
+msgstr "Obnovit"
+
+#: includes/admin/class-bnfw-notification.php:206
+msgid "Pending Review"
+msgstr "Čeká na kontrolu"
+
+#: includes/admin/class-bnfw-notification.php:180
+#: includes/admin/class-bnfw-notification.php:860
+msgid "New Tag"
+msgstr "Nový štítek"
+
+#: includes/admin/class-bnfw-notification.php:184
+msgid "New Page Published"
+msgstr "Nové zveřejnění stránky"
+
+#: includes/admin/class-bnfw-notification.php:185
+msgid "Page Updated"
+msgstr "Aktualizovaná stránka"
+
+#: includes/admin/class-bnfw-notification.php:186
+msgid "Page Pending Review"
+msgstr "Stránka čekající na schválení"
+
+#: includes/admin/class-bnfw-notification.php:187
+msgid "Page Scheduled"
+msgstr "Naplánovaná stránka"
+
+#: includes/admin/class-bnfw-notification.php:188
+msgid "Page - New Comment"
+msgstr "Stránka - nový komentář"
+
+#: includes/admin/class-bnfw-notification.php:203
+msgid "Custom Post Type"
+msgstr "Vlastní typ příspěvku"
+
+#: includes/admin/class-bnfw-notification.php:179
+#: includes/admin/class-bnfw-notification.php:857
+msgid "New Category"
+msgstr "Novou kategorii"
+
+#: includes/admin/class-bnfw-notification.php:128
+msgid "Save Notification"
+msgstr "Uložit oznámení"
+
+#: includes/admin/class-bnfw-notification.php:156
+msgid "Notification For"
+msgstr "Oznámení pro"
+
+#: includes/admin/class-bnfw-notification.php:161
+msgid "New Comment / Awaiting Moderation"
+msgstr "Nový komentář / Čekající na schválení"
+
+#: includes/admin/class-bnfw-notification.php:162
+#: includes/admin/class-bnfw-notification.php:818
+msgid "New Trackback"
+msgstr "Nový trackback"
+
+#: includes/admin/class-bnfw-notification.php:163
+#: includes/admin/class-bnfw-notification.php:821
+msgid "New Pingback"
+msgstr "Nový pingback"
+
+#: includes/admin/class-bnfw-notification.php:164
+#: includes/admin/class-bnfw-notification.php:830
+msgid "Lost Password - For Admin"
+msgstr "Zapomenuté heslo - pro administrátora"
+
+#: includes/admin/class-bnfw-notification.php:165
+msgid "New User Registration - For Admin"
+msgstr "Registrace nového uživatele - pro administrátora"
+
+#: includes/admin/class-bnfw-notification.php:168
+#: includes/admin/class-bnfw-notification.php:827
+msgid "Lost Password - For User"
+msgstr "Zapomenuté heslo - pro uživatele"
+
+#: includes/admin/class-bnfw-notification.php:169
+msgid "New User Registration - For User"
+msgstr "Registrace nového uživatele - pro uživatele"
+
+#: includes/admin/class-bnfw-notification.php:170
+#: includes/admin/class-bnfw-notification.php:836
+msgid "New User - Welcome Email"
+msgstr "Nový uživatel - uvítací e-mail"
+
+#: includes/admin/class-bnfw-notification.php:172
+#: includes/admin/class-bnfw-notification.php:824
+msgid "Comment Reply"
+msgstr "Odpověď na komentář"
+
+#: includes/admin/class-bnfw-notification.php:175
+#: includes/admin/class-bnfw-notification.php:845
+msgid "New Post Published"
+msgstr "Nové zveřejnění příspěvku"
+
+#: includes/admin/class-bnfw-notification.php:176
+#: includes/admin/class-bnfw-notification.php:848
+msgid "Post Updated"
+msgstr "Aktualizovaný příspěvek"
+
+#: includes/admin/class-bnfw-notification.php:177
+#: includes/admin/class-bnfw-notification.php:851
+msgid "Post Pending Review"
+msgstr "Příspěvek čeká na schválení"
+
+#: includes/admin/class-bnfw-notification.php:178
+#: includes/admin/class-bnfw-notification.php:854
+msgid "Post Scheduled"
+msgstr "Naplánovaný příspěvek"
+
+#: includes/admin/class-bnfw-notification.php:50
+msgid "Add New Notification"
+msgstr "Přidat nové oznámení"
+
+#: includes/admin/class-bnfw-notification.php:51
+msgid "Edit Notification"
+msgstr "Upravit oznámení"
+
+#: includes/admin/class-bnfw-notification.php:52
+msgid "New Notification"
+msgstr "Nové upozornění"
+
+#: includes/admin/class-bnfw-notification.php:53
+msgid "View Notification"
+msgstr "Zobrazit upozornění"
+
+#: includes/admin/class-bnfw-notification.php:55
+msgid "No Notifications found"
+msgstr "Nebyla nalezena žádná oznámení"
+
+#: includes/admin/class-bnfw-notification.php:56
+msgid "No Notifications found in trash"
+msgstr "V koši nebyla nalezena žádná oznámení"
+
+#: includes/admin/class-bnfw-notification.php:57
+msgid "All Notifications"
+msgstr "Veškerá oznámení"
+
+#: includes/admin/class-bnfw-notification.php:54
+msgid "Search Notifications"
+msgstr "Hledat oznámení"
+
+#: includes/admin/class-bnfw-notification.php:45
+#: includes/admin/class-bnfw-notification.php:48
+#: includes/admin/class-bnfw-notification.php:49
+msgid "Notifications"
+msgstr "Upozornění"
+
+#: includes/admin/class-bnfw-notification.php:47
+msgid "Add New"
+msgstr "Vložit novou"
+
+#: includes/admin/class-bnfw-notification.php:46
+msgid "Notification"
+msgstr "Oznámení"
+
+#: includes/admin/bnfw-settings.php:193
+#: includes/admin/class-bnfw-notification.php:263
+msgid "Plain Text"
+msgstr "Prostý text"
+
+#: includes/admin/bnfw-settings.php:123
+msgid "Suppress SPAM comment notification"
+msgstr "Potlačit oznámení komentářového SPAMU"
+
+#: includes/admin/bnfw-settings.php:128
+msgid "Don't send notifications for comments marked as SPAM by Akismet"
+msgstr "Neposílat oznámení pro komentáře označené Akismetem jako SPAM"
+
+#: includes/admin/bnfw-settings.php:141
+msgid "Default Email Format"
+msgstr "Výchozí formát e-mailu"
+
+#: includes/admin/bnfw-settings.php:146
+msgid "This will apply to all emails sent out via WordPress, even those from other plugins. For more details, please see the <a href=\"https://wordpress.org/plugins/bnfw/faq/\" target=\"_blank\">FAQ</a>."
+msgstr "Tohle ovlivní veškeré e-maily odeslané z WordPressu, a to i ty, které budou  od ostatních pluginů. Více informací, naleznete v <a href=\"https://wordpress.org/plugins/bnfw/faq/\" target=\"_blank\">Často kladených dotazech (anglicky)</a>."
+
+#: includes/admin/bnfw-settings.php:189
+#: includes/admin/class-bnfw-notification.php:258
+msgid "HTML Formatting"
+msgstr "HTML formátování"
+
+#: includes/admin/bnfw-settings.php:38
+msgid "BNFW Settings"
+msgstr "BNFW Nastavení"
+
+#: includes/admin/bnfw-settings.php:14
+#: includes/admin/class-bnfw-notification.php:120
+msgid "Notification Settings"
+msgstr "Nastavení oznámení"
+
+#: includes/admin/bnfw-settings.php:15
+msgid "Settings"
+msgstr "Konfigurace"
