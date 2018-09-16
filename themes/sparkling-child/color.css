@@ -1,0 +1,9 @@
+/* Set the custom colors here */
+
+.countdown {
+  background-color: #bd9b08;
+}
+
+#secondary .widget a, .navbar > .container .navbar-brand {
+  color: #bd9b08;
+}

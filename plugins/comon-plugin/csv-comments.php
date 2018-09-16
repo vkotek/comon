@@ -18,15 +18,13 @@ $args = array(
    'post_id' => $post_id,
 );
 
-
-
-
 // The Query
 $comments_query = new WP_Comment_Query;
 $comments = $comments_query->query( $args );
+$stamp = date("Y-m-d", time());
 
 // Filename
-$fname = "comments-". ( $post_id ? $post_id : "ALL");
+$fname = sprintf("comments_%s_%s", ( $post_id ? $post_id : "ALL"), $stamp);
 
 // Open new file
 $file = fopen($fname.".csv","w");
@@ -38,6 +36,7 @@ $cols = array(
 	'comment_id',
 	'comment_parent',
 	'comment_author',
+  'comment_author_meta',
 	'comment_date',
 	'comment_content'
 );
@@ -54,7 +53,8 @@ foreach( $comments as $c) {
 		$c->comment_ID,
 		$c->comment_parent,
 		$c->comment_author,
-		$c->comment_date,	
+    userMeta($c->user_id),
+		$c->comment_date,
 		$c->comment_content
 	);
 	fputcsv($file, $data, ",");

@@ -32,36 +32,39 @@ if ( post_password_required() ) {
 
 	<?php // You can start editing here -- including this comment! ?>
 
-	<?php if( ideablog_isactive() ) {		comment_form(); 	} else { $paging = "1000"; }	?>
-	
+	<?php if( comon_expiry() ) { comment_form(); } else { $paging = "1000"; } ?>
+
 	<?php if ( have_comments() ) : ?>
 		<h3 class="comments-title">
 			<?php
-				printf( _nx( 'One thought', '%1$s thoughts', get_comments_number(), 'comments title', 'sparkling-child' ),
-					number_format_i18n( get_comments_number() ));
-				if( current_user_can('edit_posts') ) {
-				printf( _nx( ' from %1$s user', ' from %1$s users', comments_unique_users(), 'comments user count', 'sparkling-child' ),
-					number_format_i18n( comments_unique_users() ));
-				/* printf('<span>  Uživatelů: %s</span>', comments_unique_users()); */
-				printf('  <a href="%s?page=off" title="Show comments on one page"><i class="fa fa-clone fa-x2"></i></a>', get_permalink() );
-				$csv = plugins_url('comon-plugin/csv-comments.php')."?post=".get_the_ID();
-				printf('  <a href="'.$csv.'" title="Download comments in CSV"><i class="fa fa-file-excel-o fa-x2"></i></a>', get_permalink() );
-					print('  <a href="javascript:window.print()"><i class="fa fa-print fa-x2"></i></a>');
-				} 
-				
+                if( current_user_can('edit_posts') ) {
+                    printf( _nx( 'One comment', '%1$s comments', get_comments_number(), 'comments title', 'sparkling-child' ),
+                        number_format_i18n( get_comments_number() ));
+                    if( current_user_can('edit_posts') ) { // Admin comment tools
+                        printf( _nx( ' from %1$s user', ' from %1$s users', comments_unique_users(), 'comments user count', 'sparkling-child' ),
+                            number_format_i18n( comments_unique_users() ));
+                        printf('  <a href="%s?page=off" title="%s"><i class="fa fa-clone fa-x2"></i></a>', get_permalink(), _x("Show comments on one page", "Alt text for icon above comments", "sparkling-child") );
+                        $csv = plugins_url('comon-plugin/csv-comments.php')."?post=".get_the_ID();
+                        printf('  <a href="%s" title="%s"><i class="fa fa-file-excel fa-x2"></i></a>', $csv, _x("Download comments in CSV", "Alt text for icon above comments","sparkling-child"));
+                        print('  <a href="javascript:window.print()"><i class="fa fa-print fa-x2"></i></a>');
+                    }
+                } else {
+                    esc_html_e( 'Comments:', 'sparkling-child' );
+                }
+
 			?>
 		</h3>
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) && $paging != "1000" ) : // are there comments to navigate through ?>
 		<nav id="comment-nav-above" class="comment-navigation" role="navigation">
-			<?php paginate_comments_links(); ?> 
+			<?php paginate_comments_links(); ?>
 		</nav><!-- #comment-nav-above -->
 		<?php endif; // check for comment navigation ?>
 
 		<ol class="comment-list">
 			<?php
 				wp_list_comments( array(
-					'callback'		=> 'ideablog_comment',
+					'callback'		=> 'comon_comment',
 					'style'      	=> 'ol',
 					'short_ping' 	=> true,
 					'avatar_size' 	=> 60,
@@ -70,9 +73,9 @@ if ( post_password_required() ) {
 			?>
 		</ol><!-- .comment-list -->
 
-		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) && $paging != "1000"  ) : // are there comments to navigate through ?> 
+		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) && $paging != "1000"  ) : // are there comments to navigate through ?>
 		<nav id="comment-nav-below" class="comment-navigation" role="navigation">
-			<?php paginate_comments_links(); ?> 
+			<?php paginate_comments_links(); ?>
 		</nav><!-- #comment-nav-below -->
 		<?php endif; // check for comment navigation ?>
 
@@ -83,7 +86,7 @@ if ( post_password_required() ) {
 		if ( ! comments_open() && '0' != get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
 	?>
 		<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'sparkling' ); ?></p>
-	<?php endif; ?>	
+	<?php endif; ?>
 
 
 </div><!-- #comments -->

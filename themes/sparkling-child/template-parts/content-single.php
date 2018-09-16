@@ -10,7 +10,9 @@
 				<?php /* sparkling_posted_on(); */ ?>
 		<header class="entry-header page-header">
 
-			<h1 class="entry-title "><?php the_title(); ?><small class="title-edit"><?php edit_post_link('<i class="fa fa-pencil-square-o" aria-hidden="true"></i>',"  ",""); ?></small></h1>
+			<h1 class="entry-title" style="margin-bottom: 10px;"><?php the_title(); ?><small class="title-edit"><?php edit_post_link('<i class="fas fa-edit" aria-hidden="true"></i>',"  ",""); ?></small></h1>
+			<p class="page-subtitle"><?php printf(_n('Ends in <b>%s</b> day','Ends in <b>%s</b> days', comon_expiry('days'), 'sparkling-child'), number_format_i18n(comon_expiry('days')));
+			if ( get_field('private_comments') ) {  print(esc_html_x(' | Private comments enabled', 'Message to admin below post title.','sparkling-child')); } ?> </p>
 
 			<div class="entry-meta">
 
@@ -20,10 +22,10 @@
 					if ( $categories_list && sparkling_categorized_blog() ) :
 				?>
 				<span class="cat-links"><i class="fa fa-folder-open-o"></i>
-					<?php printf( esc_html__( ' %1$s', 'sparkling' ), $categories_list ); ?>
+					<?php printf(' %1$s' , $categories_list ); ?>
 				</span>
 				<?php endif; // End if categories ?>
-				<?php edit_post_link( esc_html__( 'Edit', 'sparkling' ), '<i class="fa fa-pencil-square-o"></i><span class="edit-link">', '</span>' ); ?>
+				<?php edit_post_link( esc_html_x( 'Edit', 'Edit post link', 'sparkling-child'), '<i class="fa fa-pencil-square-o"></i><span class="edit-link">', '</span>' ); ?>
 
 			</div><!-- .entry-meta -->
 		</header><!-- .entry-header -->
@@ -44,7 +46,7 @@
 
 		<footer class="entry-meta">
 
-	    	<?php if(has_tag()) : ?>
+	    	<?php if(has_tag() && False ) : ?>
 	      <!-- tags -->
 	      <div class="tagcloud">
 
@@ -61,7 +63,7 @@
 		</footer><!-- .entry-meta -->
 	</div>
 
-	<?php if (get_the_author_meta('description')) :  ?>
+	<?php if (get_the_author_meta('description') && False ) :  ?>
 		<div class="post-inner-content secondary-content-box">
       <!-- author bio -->
       <div class="author-bio content-box-inner">

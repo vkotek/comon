@@ -1,18 +1,22 @@
 /*
- Theme Name:   Sparkling Child
- Description:  Sparkling Child Theme
+ Theme Name:   Sparkling Child New
+ Description:  Sparkling Child New Theme
  Author:       Admin
  Template:     sparkling
  Version:      1.0.0
  License:      GNU General Public License v2 or later
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
- Text Domain:  sparkling-child
+ Text Domain:  sparkling-child-new
 */
 /*
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&subset=latin,latin-ext);
 */
 body {
     font-family: 'Open Sans', sans-serif;
+}
+
+.standard-form legend {
+  font-size: 1em;
 }
 
 /* Hide attachement rules and logged in verification on comment form */
@@ -32,23 +36,10 @@ div.well {
 
 /* BG of highlighted text to be white */
 
-.navbar-default .navbar-nav > .active > a,.navbar-default .navbar-nav > .active > a:hover,.navbar-default .navbar-nav > .active > a:active { 
+.navbar-default .navbar-nav > .active > a,.navbar-default .navbar-nav > .active > a:hover,.navbar-default .navbar-nav > .active > a:active {
     background-color: #FFFFFF;
 	font-weight: bold;
-} 
-
-/* CHANGE COLORS HERE */
-
-/* Widget links blue */
-#secondary .widget a {
-    color: #9aac38;
-} 
-/* Add countdown timer to posts and adjust title */
-div.countdown {
-    background-color: #9aac38;
 }
-
-/* END OF THEME COLORS */
 
 
 /* Like button fix */
@@ -56,6 +47,10 @@ div.countdown {
 	display: inline-block;
 	float: right;
 	margin-left: 5px;
+}
+
+.vortex-container-vote-comment p{
+  display: none;
 }
 
 table.profile-fields .label {
@@ -78,12 +73,16 @@ table.profile-fields tr {
 }
 
 /* Make nav bar narrower */
-li.menu-item a {
+.navbar-default .navbar-nav > li > a {
     padding-top: 0px;
     padding-bottom: 0px;
+    line-height: 28px;
+}
+.navbar-nav > li {
+    padding: 5px;
 }
 .site-navigation-inner {
-	padding-top: 5px;
+	padding-top: 18px;
 	padding-bottom: 5px;
 }
 .main-content-area {
@@ -139,9 +138,12 @@ ol.children {
 	border: none !important;
 }
 
+#respond {
+  padding: 0px 10px !important;
+}
+
 /* LOGO adjustments */
 .navbar > .container .navbar-brand {
-    color: #005593 !important;
     text-transform: lowercase;
     font-family: 'Open Sans';
     font-weight: 400;
@@ -151,12 +153,19 @@ ol.children {
 /* Add shadow to main elements */
 .navbar, .post-inner-content, div.well {
     box-shadow: 2px 2px 9px #B3B3B3;
+    border-radius: 4px;
+}
+.post-inner-content {
+  margin-bottom: 40px;
 }
 
 /* fix spacing issues on page headers and post meta */
 .page-header {
-    position: relative;	
+    position: relative;
     margin-top: 0px;
+}
+#main .page .entry-title {
+  margin-bottom: 0px;
 }
 .entry-meta {
     margin-bottom: 20px;
@@ -172,7 +181,7 @@ iframe.iframe-stats {
 }
 
 /* Hide header on profile page */
-article#post-0 > header {
+.bp_members .page-header {
     display: none;
 }
 
@@ -185,21 +194,20 @@ article.post {
 }
 
 /* Add countdown timer to posts and adjust title */
-div.countdown {
+.countdown {
+    line-height: 1.6em;
     display: block;
     position: absolute;
     right: 0;
-	top: -16px;
+	   top: -16px;
     text-align: center;
     color: white;
-    padding: 7px 15px;
+    padding: 2px 16px;
     border-radius: 2px;
 }
-div.countdown .days {
-    display: block;
-    margin: -6px;
-    font-size: 1.5em;
-	font-weight: bold;
+.countdown b {
+  display: block;
+  font-size: 2em;
 }
 
 .post-inner-content .entry-title {
@@ -248,7 +256,7 @@ body, h1, h2, h3, ol, ul, div {
 #respond { display: none; }
 footer { display: none; }
 a[href]:after { content: none !important; }
-div.comment-body { 
+div.comment-body {
 	page-break-inside: avoid;
 	-webkit-region-break-inside: avoid;
 	}
@@ -259,5 +267,5 @@ div.comment-body {
 
 /* Fix margin above info on profile without username */
 #buddypress div#item-header #item-header-cover-image #item-header-content {
-    margin-top: -70px;
+    margin-top: -130px;
 }
