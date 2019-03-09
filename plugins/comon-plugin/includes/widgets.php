@@ -60,12 +60,18 @@ class Imgs_Widget extends WP_Widget {
 
 				// Comnent loop
 				foreach ( $comments as $comment ) {
+	        // Skip comments belonging to other users if private comments enabled and current user is not admin
+	        if( get_field('private_comments', $post_id) &&
+	            !current_user_can('edit_posts') &&
+	            $comment->user_id != get_current_user_id()) {
+	                continue;
+	        }
 					$attachmentId =  get_comment_meta($comment->comment_ID, 'attachmentId', TRUE);
 					if(is_numeric($attachmentId) && !empty($attachmentId)){
 
 						// atachement info
 						$attachmentLink = wp_get_attachment_url($attachmentId);
-						$attachmentThumb = wp_get_attachment_image($attachmentId, ATT_TSIZE);
+						$attachmentThumb = wp_get_attachment_image($attachmentId, $size = 'thumbnail');
 						$real_path = get_attached_file( $attachmentId );
 						$imgs[] = array($attachmentLink,$attachmentThumb,$real_path);
 					}
@@ -96,10 +102,10 @@ class Imgs_Widget extends WP_Widget {
 	 * @param array $instance Previously saved values from database.
 	 */
 	public function form( $instance ) {
-		$title = ! empty( $instance['title'] ) ? $instance['title'] : __( 'New title', 'comon-plugin' );
+		$title = ! empty( $instance['title'] ) ? $instance['title'] : 'New title';
 		?>
 		<p>
-		<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label>
+		<label for="<?php echo $this->get_field_id( 'title' ); ?>">Title:</label>
 		<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>">
 		</p>
 		<?php
