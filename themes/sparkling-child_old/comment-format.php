@@ -24,7 +24,7 @@ if( $private_comments_enabled && !current_user_can('edit_posts') ) {
 <?php
  $msg_link = wp_nonce_url( bp_loggedin_user_domain() . bp_get_messages_slug() . '/compose/?r=' . get_comment_author() );
  printf('<a href="%s" title="Private Message"><i class="fa fa-envelope" aria-hidden="true"></i></a>', $msg_link);
-   if( current_user_can('edit_pages') && !user_can($comment->user_id,'edit_posts') ) {
+   if( current_user_can('edit_posts') && !user_can($comment->user_id,'edit_posts') ) {
        printf('<span>  [%s]</span>', userMeta($comment->user_id));
    }
 ?>

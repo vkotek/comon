@@ -1,0 +1,143 @@
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"Project-Id-Version: Sparkling Child New\n"
+"POT-Creation-Date: 2018-06-05 22:09+0200\n"
+"PO-Revision-Date: 2018-06-05 22:13+0200\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.8\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Last-Translator: \n"
+"Language: cs_CZ\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: comment-format.php:7
+msgctxt "Label for admins in comments."
+msgid "MODERATOR"
+msgstr "MODERÁTOR"
+
+#: comment-format.php:19
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: comment-format.php:21
+#, php-format
+msgctxt "Timestamp on comment"
+msgid "  [%1$s at %2$s]"
+msgstr "  [%1$s v %2$s]"
+
+#: comments.php:40
+#, php-format
+msgctxt "comments title"
+msgid "One comment"
+msgid_plural "%1$s comments"
+msgstr[0] "Jeden komentář"
+msgstr[1] "%1$s komentáře"
+msgstr[2] "%1$s komentářů"
+
+#: comments.php:43
+#, php-format
+msgctxt "comments user count"
+msgid " from %1$s user"
+msgid_plural " from %1$s users"
+msgstr[0] " od %1$s uživatele"
+msgstr[1] " od %1$s uživatelů"
+msgstr[2] " od %1$s uživatelů"
+
+#: comments.php:45
+msgctxt "Alt text for icon above comments"
+msgid "Show comments on one page"
+msgstr ""
+
+#: comments.php:47
+msgctxt "Alt text for icon above comments"
+msgid "Download comments in CSV"
+msgstr ""
+
+#: comments.php:84
+msgid "Comments are closed."
+msgstr "Diskuze je uzavřena."
+
+#: content.php:20 template-parts/content.php:20
+#, php-format
+msgid "Ends in <b>%s</b> day"
+msgid_plural "Ends in <b>%s</b> days"
+msgstr[0] "Končí za <b>%s</b> den"
+msgstr[1] "Končí za <b>%s</b> dny"
+msgstr[2] "Končí za <b>%s</b> dní"
+
+#: content.php:26 template-parts/content.php:26
+msgid "Leave a comment"
+msgstr "Zanechat komentář"
+
+#: content.php:26 template-parts/content.php:26
+msgid "1 Comment"
+msgstr "1 komentář"
+
+#: content.php:26 template-parts/content.php:26
+msgid "% Comments"
+msgstr "% komentářů"
+
+#: content.php:28 template-parts/content.php:28
+msgid "Edit"
+msgstr "Upravit"
+
+#: content.php:40 content.php:48 template-parts/content.php:40
+#: template-parts/content.php:48
+msgid "Read More"
+msgstr "Číst dál"
+
+#: content.php:56 template-parts/content-page.php:30
+#: template-parts/content-single.php:35 template-parts/content.php:56
+msgid "Pages:"
+msgstr ""
+
+#: functions.php:106
+msgctxt "Checkmark alt text for topics."
+msgid "You have commented in this topic."
+msgstr "Do tohoto témata jste již přispěli"
+
+#: functions.php:109
+msgctxt "Checkmark alt text for topics."
+msgid "You have not commented on this topic."
+msgstr "Do tohoto témata jste ještě nepřispěli"
+
+#. translators: %s: Name of current post
+#: template-parts/content-page.php:49
+#, php-format
+msgid "Edit %s"
+msgstr "Upravit %s"
+
+#. translators: used between list items, there is a space after the comma
+#: template-parts/content-single.php:19
+msgid ", "
+msgstr ""
+
+#: template-parts/content-single.php:26
+msgctxt "Edit post link"
+msgid "Edit"
+msgstr "Upravit"
+
+#. Theme Name of the plugin/theme
+msgid "Sparkling Child New"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Sparkling Child New Theme"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Admin"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Home ( Active topics )"
+msgstr "Domů"

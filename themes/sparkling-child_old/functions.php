@@ -14,7 +14,7 @@ add_action( 'after_setup_theme', function () {
 /* Add favicon from MB severs */
 add_action ('wp_head', 'add_favicon');
 function add_favicon() { ?>
-<link href="https://www.kantar.com/favicon.ico" rel="shortcut icon" type="image/x-icon">
+<link href="http://www.kantar.com/favicon.ico" rel="shortcut icon" type="image/x-icon">
 <?php }
 
 /* Change logo to custom one on login page */

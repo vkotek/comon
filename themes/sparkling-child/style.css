@@ -249,7 +249,7 @@ body, h1, h2, h3, ol, ul, div {
     color: #3c3c3c;
     border: 0;
 	}
-#header { }
+
 #content { display: block; }
 #comments { display: block; }
 .well { display: none; }
@@ -268,4 +268,19 @@ div.comment-body {
 /* Fix margin above info on profile without username */
 #buddypress div#item-header #item-header-cover-image #item-header-content {
     margin-top: -130px;
+}
+
+/* Styling of disclaimer at registration */
+.field_268 input {
+    margin: 0px 4px !important;
+}
+.field_268 .option-label {
+    font-weight: 300 !important;
+    font-size: 12px;
+}
+.field_268 legend {
+    display: none !important;
+}
+#field-visibility-settings-toggle-268 {
+  display: none;
 }
