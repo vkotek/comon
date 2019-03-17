@@ -35,7 +35,6 @@ function my_load_plugin_textdomain() {
 }
 add_action( 'plugins_loaded', 'my_load_plugin_textdomain' );
 
-include_once(ABSPATH .'wp-admin/includes/plugin.php');
 
 // Email settings functions
 require plugin_dir_path( __FILE__ ) . 'includes/emails.php';
@@ -93,7 +92,7 @@ function comon_data_filter() {
     // Get post info
 	$post_group = get_field('group');
 	$post_gender = get_field('gender');
-  $post_age = get_field('age');
+    $post_age = get_field('age');
 	$post_city = get_field('city');
 	$post_edu = get_field('education');
 
@@ -189,11 +188,12 @@ function userMeta($user_id) {
 	/* DEFAULT META */
 
 	// Gender
-  $user_gender = bp_get_profile_field_data('field=139&user_id='.$user_id);
-  $user_gender = get_text($user_gender);
+    $user_gender = bp_get_profile_field_data('field=139&user_id='.$user_id);
+    $meta[] = get_text($user_gender);
 
 	// Age
 	$user_age = bp_get_profile_field_data('field=142&user_id='.$user_id);
+	$meta[] = $user_age;
 
 	// City size
 	$user_city = bp_get_profile_field_data('field=256&user_id='.$user_id);
@@ -210,6 +210,7 @@ function userMeta($user_id) {
     default:
       $user_city = "N/A";
 	}
+	$meta[] = $user_city;
 
 	// Education level
 	$user_edu = bp_get_profile_field_data('field=186&user_id='.$user_id);
@@ -226,6 +227,8 @@ function userMeta($user_id) {
 			break;
 	}
 
+	$meta[] = $user_edu;
+
 	/* CUSTOM META */
 
 	// Add your custom meta here
@@ -234,20 +237,6 @@ function userMeta($user_id) {
 	// $user_q{x} = bp_get_profile_field_data('field={y}&user_id='.$user_id);
 	// $meta[] = $user_q{x};
 
-  # Visible to Admins only
-  if ( current_user_can('edit_posts') && !current_user_can('edit_pages') ) {
-    $meta[] = $user_gender;
-  	$meta[] = $user_age;
-  	$meta[] = $user_city;
-    $meta[] = $user_edu;
-  }
-  # Visible to Client only
-  elseif ( current_user_can('edit_pages') ) {
-    $meta[] = $user_gender;
-  	$meta[] = $user_age;
-  	$meta[] = $user_city;
-    $meta[] = $user_edu;
-  }
 
     return(join(', ',$meta));
 }
